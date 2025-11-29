@@ -31,7 +31,7 @@ interface Props {
   style?: Record<string, any>;
 }
 
-const props = defineProps<Props>();
+const { src, alt, className, style } = defineProps<Props>();
 
 const didError = ref(false);
 
