@@ -47,31 +47,48 @@
         :initial="{ opacity: 0, scale: 0.8 }"
         :visibleOnce="{ opacity: 1, scale: 1 }"
         :transition="{ duration: 1000, delay: 300 }"
-        class="relative w-64 h-64 md:w-96 md:h-96 mb-12"
+        class="flex flex-col md:block items-center mb-12"
       >
-        <div class="absolute inset-0 rounded-full bg-gradient-to-b from-amber-500/10 to-transparent blur-3xl"></div>
-        <div class="w-full h-full relative z-10 rotating-image">
-          <ImageWithFallback
-            src="https://images.unsplash.com/photo-1585326054620-2d6a061a6315?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcmllZCUyMHRhbmdlcmluZSUyMHBlZWwlMjB0ZWF8ZW58MXx8fHwxNzY0MzI1MTYzfDA&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Aged Tangerine Peel"
-            class="w-full h-full object-cover rounded-full mask-radial-faded opacity-90 shadow-2xl border border-white/40"
-            :style="{
-              maskImage: 'radial-gradient(black 60%, transparent 100%)',
-              WebkitMaskImage: 'radial-gradient(black 60%, transparent 100%)'
-            }"
-          />
+        <!-- Image Container -->
+        <div class="relative w-64 h-64 md:w-96 md:h-96">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-b from-amber-500/10 to-transparent blur-3xl"></div>
+          <div class="w-full h-full relative z-10 rotating-image">
+            <ImageWithFallback
+              :src="chenpiImg"
+              alt="Aged Tangerine Peel"
+              class="w-full h-full object-cover rounded-full mask-radial-faded opacity-90 shadow-2xl border border-white/40"
+              :style="{
+                maskImage: 'radial-gradient(black 60%, transparent 100%)',
+                WebkitMaskImage: 'radial-gradient(black 60%, transparent 100%)'
+              }"
+            />
+          </div>
+          
+          <!-- Floating Data Points - PC端保持原样 -->
+          <div class="pc-data-point absolute top-0 right-0 md:-right-20 bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl z-20">
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">APIC</div>
+            <div class="text-2xl font-bold text-amber-600">15-25%</div>
+            <div class="text-xs text-stone-400">自然复利</div>
+          </div>
+
+          <div class="pc-data-point absolute bottom-0 left-0 md:-left-20 bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl z-20">
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">Mint Price</div>
+            <div class="text-2xl font-bold text-stone-900">88 USDT</div>
+          </div>
         </div>
         
-        <!-- Floating Data Points -->
-        <div class="absolute top-0 right-0 md:-right-20 bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl">
-          <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">APIC</div>
-          <div class="text-2xl font-bold text-amber-600">15-25%</div>
-          <div class="text-xs text-stone-400">自然复利</div>
-        </div>
+        <!-- Mobile端描述框 - 图片下方水平排列 -->
+        <div class="flex md:hidden gap-4 mt-6 justify-center w-full">
+          <div class="bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl">
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">APIC</div>
+            <div class="text-2xl font-bold text-amber-600">15-25%</div>
+            <div class="text-xs text-stone-400">自然复利</div>
+          </div>
 
-        <div class="absolute bottom-0 left-0 md:-left-20 bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl">
-          <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">Mint Price</div>
-          <div class="text-2xl font-bold text-stone-900">88 USDT</div>
+          <div class="bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl">
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">Mint Price</div>
+            <div class="text-2xl font-bold text-stone-900">88 USDT</div>
+          </div>
         </div>
       </div>
 
@@ -88,7 +105,7 @@
           <span class="text-amber-600/90 font-medium">限量 66,660 枚（永不再增发）</span>
         </p>
 
-        <button class="group relative px-10 py-5 bg-stone-900 hover:bg-stone-800 text-white font-bold rounded-full transition-all hover:shadow-[0_0_30px_rgba(0,0,0,0.1)] flex items-center space-x-3">
+        <button class="orange-button group relative px-10 py-5 text-white font-bold rounded-full transition-all flex items-center space-x-3">
           <Wallet :size="20" />
           <span>立即铸造</span>
           <ArrowRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -102,6 +119,7 @@
 <script setup lang="ts">
 import { ArrowRight, Wallet } from 'lucide-vue-next';
 import ImageWithFallback from './figma/ImageWithFallback.vue';
+import chenpiImg from '../assets/chenpi.png';
 </script>
 
 <style scoped>
@@ -115,6 +133,26 @@ import ImageWithFallback from './figma/ImageWithFallback.vue';
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.orange-button {
+  background-color: #E17100;
+}
+
+.orange-button:hover {
+  background-color: #C96100;
+  box-shadow: 0 0 30px rgba(225, 113, 0, 0.3);
+}
+
+/* PC端描述框在移动端隐藏 */
+.pc-data-point {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .pc-data-point {
+    display: block;
   }
 }
 </style>

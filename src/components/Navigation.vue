@@ -62,9 +62,9 @@
             </div>
           </div>
 
-          <button class="px-5 py-2 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-colors text-sm font-medium flex items-center space-x-2">
+          <button class="orange-button px-5 py-2 text-white rounded-full transition-colors text-sm font-medium flex items-center space-x-2">
             <Wallet :size="16" />
-            <span>进入 DAPP</span>
+            <span>即将开始</span>
           </button>
         </div>
 
@@ -121,9 +121,9 @@
           </button>
         </div>
 
-        <button class="w-full px-5 py-3 bg-stone-900 text-white rounded-full hover:bg-stone-800 transition-colors font-medium flex items-center justify-center space-x-2">
+        <button class="orange-button w-full px-5 py-3 text-white rounded-full transition-colors font-medium flex items-center justify-center space-x-2">
           <Wallet :size="18" />
-          <span>进入 DAPP</span>
+          <span>即将开始</span>
         </button>
       </div>
     </div>
@@ -197,5 +197,13 @@ onUnmounted(() => {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   min-width: 110px;
   width: auto;
+}
+
+.orange-button {
+  background-color: #E17100;
+}
+
+.orange-button:hover {
+  background-color: #C96100;
 }
 </style>

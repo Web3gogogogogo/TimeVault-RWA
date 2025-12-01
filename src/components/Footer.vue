@@ -16,7 +16,7 @@
           把 2025 年的时间，装进你的钱包
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-          <button class="footer-cta-button px-12 py-5 bg-stone-900 text-white font-bold rounded-full transition-all duration-300 text-lg w-full sm:w-auto shadow-lg">
+          <button class="footer-cta-button orange-button px-12 py-5 text-white font-bold rounded-full transition-all duration-300 text-lg w-full sm:w-auto shadow-lg">
             立即铸造 (88 USDT)
           </button>
         </div>
@@ -63,10 +63,17 @@ import { Twitter, Github, Send, Mail } from 'lucide-vue-next';
 </script>
 
 <style scoped>
+.orange-button {
+  background-color: #E17100;
+}
+
+.orange-button:hover {
+  background-color: #C96100;
+}
+
 .footer-cta-button:hover {
-  background-color: #D97706;
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 25px 50px -12px rgba(217, 119, 6, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(225, 113, 0, 0.25);
 }
 
 .footer-link {
