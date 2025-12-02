@@ -202,7 +202,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, nextTick } from 'vue';
-import { MapPin, QrCode, ShieldCheck, X } from 'lucide-vue-next';
+import { MapPin, ShieldCheck, X } from 'lucide-vue-next';
 import ImageWithFallback from './figma/ImageWithFallback.vue';
 import image1 from '@/assets/1.jpg';
 import image2 from '@/assets/2.jpg';
