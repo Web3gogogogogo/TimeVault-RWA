@@ -100,7 +100,7 @@
             <Percent :size="24" />
           </div>
           <h3 class="text-xl font-bold text-stone-900 mb-2">终身折扣</h3>
-          <p class="text-stone-500 text-sm flex-grow">六真陈皮全线产品 8 折起</p>
+          <p class="text-stone-500 text-sm flex-grow">六真新会陈皮全线产品 8 折起</p>
         </div>
       </div>
     </div>

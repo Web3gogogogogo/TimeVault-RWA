@@ -13,7 +13,7 @@
           </div>
           <div>
             <div class="text-lg font-bold text-stone-900 leading-tight">陈皮纪元</div>
-            <div class="text-[10px] text-stone-500 tracking-wider uppercase">TimeVault RWA</div>
+            <div class="text-[10px] text-stone-500 tracking-wider uppercase">CHENPI GENESIS</div>
           </div>
         </div>
 
@@ -64,7 +64,7 @@
 
           <button class="orange-button px-5 py-2 text-white rounded-full transition-colors text-sm font-medium flex items-center space-x-2">
             <Wallet :size="16" />
-            <span>即将开始</span>
+            <span>立即购买</span>
           </button>
         </div>
 
@@ -123,7 +123,7 @@
 
         <button class="orange-button w-full px-5 py-3 text-white rounded-full transition-colors font-medium flex items-center justify-center space-x-2">
           <Wallet :size="18" />
-          <span>即将开始</span>
+          <span>立即购买</span>
         </button>
       </div>
     </div>

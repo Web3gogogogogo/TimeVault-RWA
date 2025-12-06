@@ -17,7 +17,7 @@
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
           <button class="footer-cta-button orange-button px-12 py-5 text-white font-bold rounded-full transition-all duration-300 text-lg w-full sm:w-auto shadow-lg">
-            立即铸造 (88 USDT)
+            立即购买 (88 USDT)
           </button>
         </div>
         <div class="mt-12 flex flex-wrap justify-center gap-8 text-sm text-stone-500 uppercase tracking-wider">
@@ -48,7 +48,7 @@
             © 2025 陈皮纪元. All rights reserved.
           </div>
           <div class="text-stone-400 text-xs max-w-md ml-auto">
-            陈皮创岁纪元 NFT 并非证券，仅为真实资产数字所有权凭证<br/>
+            新会陈皮创岁纪元 NFT 并非证券，仅为真实资产数字所有权凭证<br/>
             风险提示：资产价格受市场波动影响，请理性参与
           </div>
         </div>

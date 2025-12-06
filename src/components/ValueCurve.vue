@@ -12,7 +12,7 @@
             时间，<br/>就是收益率
           </h2>
           <p class="text-xl text-stone-500 font-light leading-relaxed mb-12">
-            陈皮的价值不靠炒作，靠分子结构随时间自我优化。<br/>
+            新会陈皮的价值不靠炒作，靠分子结构随时间自我优化。<br/>
             <span class="text-sm mt-4 block text-stone-400">（挥发油、黄酮含量逐年提升，香气与药效更醇）</span>
           </p>
 
@@ -43,12 +43,6 @@
             :option="chartOption"
             autoresize
           />
-          
-          <!-- Overlay Stats -->
-          <div class="absolute top-10 right-10 text-right hidden sm:block">
-            <div class="text-amber-600 font-mono text-sm">1987 VINTAGE</div>
-            <div class="text-stone-900 font-bold text-xl">¥3,760,000 / 50g</div>
-          </div>
         </div>
 
       </div>
@@ -75,29 +69,113 @@ use([
   GridComponent,
 ]);
 
-const chartData = [
+// 主体数据（2025-2010年）
+const mainData = [
   { name: '2025 (新皮)', price: 600, label: '600' },
   { name: '2019 (5年)', price: 3900, label: '3.9k' },
   { name: '2015 (10年)', price: 5500, label: '5.5k' },
   { name: '2010 (15年)', price: 20000, label: '20k' },
+];
+
+// 早期数据（1987年）
+const earlyData = [
   { name: '1987 (38年)', price: 3760000, label: '3.76M' },
 ];
 
 const chartOption = {
-  xAxis: {
-    type: 'category',
-    data: chartData.map(item => item.name),
-    axisLine: { show: false },
-    axisTick: { show: false },
-    axisLabel: {
-      color: '#78716C',
-      fontSize: 12,
+  // 主坐标系（显示2025-2010年）
+  grid: [
+    {
+      left: '5%',
+      right: '35%',
+      top: '10%',
+      bottom: '15%',
+      containLabel: false,
     },
-  },
-  yAxis: {
-    type: 'value',
-    show: false,
-  },
+    // 右上角独立坐标系（显示1987年）
+    {
+      left: '65%',
+      right: '5%',
+      top: '5%',
+      bottom: '60%',
+      containLabel: false,
+    },
+  ],
+  xAxis: [
+    // 主X轴（2025-2010年）
+    {
+      type: 'category',
+      gridIndex: 0,
+      data: [...mainData.map(item => item.name), '...'], // 添加断裂标记
+      axisLine: { 
+        show: true,
+        lineStyle: { color: '#E7E5E4', width: 1 },
+        onZero: false,
+      },
+      axisTick: { show: false },
+      axisLabel: {
+        color: '#78716C',
+        fontSize: 12,
+        formatter: (value: string) => {
+          if (value === '...') return '⋯';
+          return value;
+        },
+      },
+      boundaryGap: false,
+    },
+    // 副X轴（1987年，右上角）
+    {
+      type: 'category',
+      gridIndex: 1,
+      data: ['', '1987 (38年)', ''],
+      axisLine: { 
+        show: true,
+        lineStyle: { color: '#D97706', width: 1 },
+      },
+      axisTick: { show: false },
+      axisLabel: {
+        color: '#78716C',
+        fontSize: 11,
+        showMinLabel: false,
+        showMaxLabel: false,
+      },
+      boundaryGap: false,
+    },
+  ],
+  yAxis: [
+    // 主Y轴（2025-2010年）
+    {
+      type: 'value',
+      gridIndex: 0,
+      show: false,
+      scale: true,
+    },
+    // 副Y轴（1987年，右上角）
+    {
+      type: 'value',
+      gridIndex: 1,
+      show: true,
+      position: 'right',
+      axisLine: { 
+        show: true,
+        lineStyle: { color: '#D97706', width: 1 },
+      },
+      axisTick: { show: false },
+      axisLabel: {
+        color: '#78716C',
+        fontSize: 10,
+        formatter: (value: number) => {
+          if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M`;
+          if (value >= 1000) return `${(value / 1000).toFixed(0)}k`;
+          return value.toString();
+        },
+      },
+      splitLine: {
+        show: true,
+        lineStyle: { color: '#E7E5E4', type: 'dashed', width: 1 },
+      },
+    },
+  ],
   tooltip: {
     trigger: 'axis',
     backgroundColor: '#FFFFFF',
@@ -106,11 +184,63 @@ const chartOption = {
     textStyle: {
       color: '#D97706',
     },
+    formatter: (params: any) => {
+      if (Array.isArray(params)) {
+        const param = params[0];
+        if (param.value == null) return '';
+        return `${param.name}<br/>¥${param.value.toLocaleString()} / 50g`;
+      }
+      return '';
+    },
   },
-  series: [
+  graphic: [
+    // 绘制从2010到1987的虚线连接（从主坐标系右侧指向右上角坐标系）
     {
-      data: chartData.map(item => item.price),
+      type: 'group',
+      left: '60%',  // 主坐标系右侧边缘（grid[0]的right是35%，所以60%是主坐标系右边缘）
+      top: '50%',   // 主坐标系中2010年数据点的Y位置（根据数据值计算）
+      children: [
+        {
+          type: 'line',
+          shape: {
+            x1: 0,
+            y1: 0,
+            x2: 35,  // 向右上方延伸，指向右上角坐标系
+            y2: -200, // 向上延伸
+          },
+          style: {
+            stroke: '#D97706',
+            lineDash: [10, 5],
+            lineWidth: 2,
+            opacity: 0.5,
+          },
+        },
+        // 添加一个小箭头指向右上角
+        {
+          type: 'polygon',
+          shape: {
+            points: [
+              [35, -200],
+              [30, -195],
+              [30, -205],
+            ],
+          },
+          style: {
+            fill: '#D97706',
+            opacity: 0.5,
+          },
+        },
+      ],
+    },
+  ],
+  series: [
+    // 主体数据系列（2025-2010年）
+    {
+      name: '主体数据',
       type: 'line',
+      xAxisIndex: 0,
+      yAxisIndex: 0,
+      data: [...mainData.map(item => item.price), null], // 添加null表示断裂
       smooth: true,
       lineStyle: {
         color: '#D97706',
@@ -129,14 +259,64 @@ const chartOption = {
           ],
         },
       },
+      symbol: 'circle',
+      symbolSize: 8,
+      itemStyle: {
+        color: '#D97706',
+      },
+      markPoint: {
+        data: [
+          {
+            name: '2010',
+            coord: ['2010 (15年)', 20000],
+            symbol: 'circle',
+            symbolSize: 8,
+            itemStyle: {
+              color: '#D97706',
+            },
+          },
+        ],
+      },
+    },
+    // 早期数据系列（1987年，右上角）
+    {
+      name: '早期数据',
+      type: 'line',
+      xAxisIndex: 1,
+      yAxisIndex: 1,
+      data: [null, earlyData[0].price, null],
+      smooth: false,
+      lineStyle: {
+        color: '#D97706',
+        width: 2,
+      },
+      symbol: 'circle',
+      symbolSize: 10,
+      itemStyle: {
+        color: '#D97706',
+      },
+      markPoint: {
+        data: [
+          {
+            name: '1987',
+            coord: [1, earlyData[0].price],
+            symbol: 'circle',
+            symbolSize: 12,
+            itemStyle: {
+              color: '#D97706',
+            },
+            label: {
+              show: true,
+              formatter: '3.76M',
+              color: '#D97706',
+              fontSize: 12,
+              fontWeight: 'bold',
+            },
+          },
+        ],
+      },
     },
   ],
-  grid: {
-    left: 0,
-    right: 0,
-    top: 20,
-    bottom: 20,
-  },
 };
 </script>
 

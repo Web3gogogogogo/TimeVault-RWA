@@ -4,6 +4,7 @@
     
     <main>
       <Hero />
+      <Compliance />
       <Comparison />
       <ProductDetails />
       <ValueCurve />
@@ -20,6 +21,7 @@
 import { ref, onMounted, onUnmounted } from 'vue';
 import Navigation from './components/Navigation.vue';
 import Hero from './components/Hero.vue';
+import Compliance from './components/Compliance.vue';
 import Comparison from './components/Comparison.vue';
 import ProductDetails from './components/ProductDetails.vue';
 import ValueCurve from './components/ValueCurve.vue';

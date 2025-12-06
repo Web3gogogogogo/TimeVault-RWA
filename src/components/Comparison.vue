@@ -8,11 +8,11 @@
         class="text-center mb-20"
       >
         <h2 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-stone-900">
-          陈皮，是东方最硬的<br/><span class="text-amber-600">「软黄金」</span>
+          新会陈皮，是东方最硬的<br/><span class="text-amber-600">「软黄金」</span>
         </h2>
         <p class="text-stone-500 max-w-2xl mx-auto text-lg">
-          2010 年陈皮现价 2 万/斤 · 1987 年老皮已超 188 万/50 克<br/>
-          <span class="text-stone-400 text-sm mt-2 block">—— 历史证明，时间从不辜负陈皮</span>
+          2010 年新会陈皮现价 2 万/斤 · 1987 年老皮已超 188 万/50 克<br/>
+          <span class="text-stone-400 text-sm mt-2 block">—— 历史证明，时间从不辜负新会陈皮</span>
         </p>
       </div>
 
@@ -52,7 +52,7 @@
             <ComparisonItem :positive="true" text="全链溯源 + 蚂蚁链数据产权证书" />
             <ComparisonItem :positive="true" text="88 USDT 即可拥有 1 斤真实资产" />
             <ComparisonItem :positive="true" text="时间越久，价值越高（自然复利）" />
-            <ComparisonItem :positive="true" text="5 年免费国资恒温仓 + 平安全额承保" />
+            <ComparisonItem :positive="true" text="五年供销国企陈化仓 + 平安全额承保" />
           </div>
         </div>
 

@@ -95,7 +95,7 @@
           </div>
           
           <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight text-stone-900">
-            每一枚 NFT，都对应<br/>一筐看得见的陈皮
+            每一枚 NFT，都对应<br/>一斤看得见的新会陈皮
           </h2>
 
           <div class="space-y-6 font-light text-stone-600 text-lg">
@@ -107,13 +107,13 @@
             </div>
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
               <span>品种</span>
-              <span class="text-stone-900 font-medium">茶枝柑（正宗道地）</span>
+              <span class="text-stone-900 font-medium">新会茶枝柑（正宗道地）</span>
             </div>
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
               <span>仓储</span>
               <span class="text-stone-900 font-medium text-right">
                 中国供销·江门新会陈皮产业园<br/>
-                <span class="text-xs text-stone-500">3.6 万㎡国资恒温仓</span>
+              
               </span>
             </div>
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">

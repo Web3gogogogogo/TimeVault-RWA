@@ -38,7 +38,7 @@
         :transition="{ duration: 800, delay: 200 }"
         class="text-xl md:text-2xl text-stone-500 font-light tracking-wide mb-12 max-w-2xl mx-auto"
       >
-        全球首枚增值型 RWA：陈皮创岁纪元 NFT (2025)
+        全球首枚增值型 RWA：新会陈皮创岁纪元 NFT (2025)
       </p>
 
       <!-- Main Visual - Floating Slice -->
@@ -107,7 +107,7 @@
 
         <button class="orange-button group relative px-10 py-5 text-white font-bold rounded-full transition-all flex items-center space-x-3">
           <Wallet :size="20" />
-          <span>立即铸造</span>
+          <span>立即购买</span>
           <ArrowRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
