@@ -88,7 +88,7 @@
           <p class="text-stone-500 text-sm flex-grow">未来所有 RWA 项目白名单</p>
         </div>
 
-        <!-- 终身折扣 -->
+        <!-- 专属优惠 -->
         <div
           v-motion
           :initial="{ opacity: 0, y: 30 }"
@@ -97,10 +97,10 @@
           class="rights-card bg-[#F2EFE9] p-8 rounded-2xl border border-stone-200 text-left group transition-all duration-300 min-h-[180px] flex flex-col"
         >
           <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform duration-300 border border-stone-100 shadow-sm flex-shrink-0">
-            <Percent :size="24" />
+            <Crown :size="24" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2">终身折扣</h3>
-          <p class="text-stone-500 text-sm flex-grow">六真新会陈皮全线产品 8 折起</p>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">专属待遇</h3>
+          <p class="text-stone-500 text-sm flex-grow">新会陈皮RWA基地研学考察</p>
         </div>
       </div>
     </div>
@@ -108,7 +108,7 @@
 </template>
 
 <script setup lang="ts">
-import { Truck, TrendingUp, Vote, Coins, Star, Percent } from 'lucide-vue-next';
+import { Truck, TrendingUp, Vote, Coins, Star, Crown } from 'lucide-vue-next';
 </script>
 
 <style scoped>

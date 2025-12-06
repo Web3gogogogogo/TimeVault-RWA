@@ -72,8 +72,8 @@
           </div>
 
           <div class="pc-data-point absolute bottom-0 left-0 md:-left-20 bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl z-20">
-            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">Mint Price</div>
-            <div class="text-2xl font-bold text-stone-900">88 USDT</div>
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">RWA锚定</div>
+            <div class="text-2xl font-bold text-stone-900">100%实物资产</div>
           </div>
         </div>
         
@@ -86,8 +86,8 @@
           </div>
 
           <div class="bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl">
-            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">Mint Price</div>
-            <div class="text-2xl font-bold text-stone-900">88 USDT</div>
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">RWA锚定</div>
+            <div class="text-2xl font-bold text-stone-900">100%实物资产</div>
           </div>
         </div>
       </div>

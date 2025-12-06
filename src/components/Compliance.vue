@@ -76,7 +76,7 @@
 
             <!-- 实物保障说明 - Web3风格 -->
             <div class="flex justify-center px-4">
-              <div class="flex items-center gap-3 text-stone-700 bg-white/60 backdrop-blur-md px-4 md:px-6 py-3 md:py-4 rounded-full border border-amber-200/50 shadow-lg web3-badge max-w-4xl">
+              <div class="flex items-center gap-4 md:gap-5 text-stone-700 bg-white/60 backdrop-blur-md px-4 md:px-6 py-3 md:py-4 rounded-full border border-amber-200/50 shadow-lg web3-badge max-w-4xl">
                 <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0 overflow-hidden">
                   <img :src="logoImg" alt="LOGO" class="w-full h-full object-contain p-1" />
                 </div>
