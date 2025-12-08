@@ -100,33 +100,24 @@
 
           <div class="space-y-6 font-light text-stone-600 text-lg">
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
-              <span>产地</span>
+              <span>标准</span>
               <span class="text-stone-900 font-medium flex items-center">
-                <MapPin :size="16" class="mr-2 text-amber-600"/>新会核心产区（国家地理标志）
+                每筐10斤装2025新皮(初始重量)+链锁
               </span>
             </div>
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
               <span>品种</span>
               <span class="text-stone-900 font-medium">新会茶枝柑（正宗道地）</span>
             </div>
-            <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
-              <span>仓储</span>
-              <span class="text-stone-900 font-medium text-right">
-                中国供销·江门新会陈皮产业园<br/>
-              
-              </span>
-            </div>
-            <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
-              <span>保险</span>
-              <span class="text-stone-900 font-medium">中国平安全额财产险</span>
-            </div>
+            
+           
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
               <span>溯源</span>
-              <span class="text-stone-900 font-medium">蚂蚁链上链 + 数据产权证书</span>
+              <span class="text-stone-900 font-medium">RFID物联网+蚂蚁链上链+数据产权证</span>
             </div>
             <div class="flex items-center justify-between pt-2 detail-item">
               <span>仓储费用</span>
-              <span class="text-amber-600 font-bold">首 5 年免费</span>
+              <span class="text-amber-600 font-bold">仓储陈化首5年免费</span>
             </div>
           </div>
         </div>

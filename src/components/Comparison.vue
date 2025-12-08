@@ -11,7 +11,7 @@
           新会陈皮，是东方最硬的<br/><span class="text-amber-600">「软黄金」</span>
         </h2>
         <p class="text-stone-500 max-w-2xl mx-auto text-lg">
-          2010 年新会陈皮现价 2 万/斤 · 1987 年老皮已超 188 万/50 克<br/>
+          2010 年新会陈皮现价 2 万/斤 · 市场价格以泓达堂这个为准，老皮可以以政府组织的拍卖活动为准。<br/>
           <span class="text-stone-400 text-sm mt-2 block">—— 历史证明，时间从不辜负新会陈皮</span>
         </p>
       </div>
@@ -50,9 +50,9 @@
           <div class="space-y-8">
             <ComparisonItem :positive="true" text="7×24 小时全球交易" />
             <ComparisonItem :positive="true" text="全链溯源 + 蚂蚁链数据产权证书" />
-            <ComparisonItem :positive="true" text="88 USDT 即可拥有 1 斤真实资产" />
+            <ComparisonItem :positive="true" text="88 USD拥有1斤实物资产" />
             <ComparisonItem :positive="true" text="时间越久，价值越高（自然复利）" />
-            <ComparisonItem :positive="true" text="五年供销国企陈化仓 + 平安全额承保" />
+            <ComparisonItem :positive="true" text="五年供销国企陈化仓 + 平安承保" />
           </div>
         </div>
 

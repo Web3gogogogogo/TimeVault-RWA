@@ -17,7 +17,7 @@
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
           <button class="footer-cta-button orange-button px-12 py-5 text-white font-bold rounded-full transition-all duration-300 text-lg w-full sm:w-auto shadow-lg">
-            立即购买 (88 USDT)
+            立即购买 (88 USD)
           </button>
         </div>
         <div class="mt-12 flex flex-wrap justify-center gap-8 text-sm text-stone-500 uppercase tracking-wider">

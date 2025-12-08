@@ -67,7 +67,7 @@
                 <!-- 实物侧 -->
                 <div class="text-center group">
                   <div class="inline-block bg-white p-8 rounded-2xl shadow-lg mb-4 web3-physical-badge border border-stone-200">
-                    <div class="text-stone-900 font-black text-5xl md:text-6xl leading-tight">1 斤实物</div>
+                    <div class="text-stone-900 font-black text-5xl md:text-6xl leading-tight">1 斤实物<span class="text-2xl md:text-3xl font-normal">（初始重量）</span></div>
                   </div>
                   <div class="text-stone-500 text-xs uppercase tracking-[0.2em] font-medium">新会陈皮</div>
                 </div>
@@ -251,7 +251,7 @@
           <div class="flex items-start">
             <Info :size="20" class="text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
             <div class="text-stone-700 text-sm">
-              <strong class="text-amber-700">仓储保障：</strong>所有实物新会陈皮均存储于中国供销·江门新会陈皮产业园的3.6万㎡国资恒温仓，并由中国平安全额财产险承保，确保资产安全。
+              <strong class="text-amber-700">仓储保障：</strong>所有实物新会陈皮均存储于中国供销·江门新会陈皮产业园的3.6万㎡国企陈化仓，并由中国平安财产险承保，确保资产安全。
             </div>
           </div>
         </div>

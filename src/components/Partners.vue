@@ -1,6 +1,9 @@
 <template>
   <section class="py-24 bg-[#F2EFE9] border-y border-stone-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Logo 居中显示 -->
+
+      
       <div class="relative">
         <!-- 轮播容器 -->
         <div class="partners-carousel">
@@ -29,6 +32,8 @@
 </template>
 
 <script setup lang="ts">
+import logoImg from '../assets/LOGO.png';
+
 const partners = [
   '中国供销合作社',
   '江门新会陈皮产业园',
