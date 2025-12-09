@@ -11,7 +11,8 @@
           新会陈皮，是东方最硬的<br/><span class="text-amber-600">「软黄金」</span>
         </h2>
         <p class="text-stone-500 max-w-2xl mx-auto text-lg">
-          2010 年新会陈皮现价 2 万/斤 · 市场价格以泓达堂这个为准，老皮可以以政府组织的拍卖活动为准。<br/>
+          1986年老皮拍卖价50万元/100克<br/>
+          <span class="block">数据来源于2024年助力乡村振兴慈善活动</span>
           <span class="text-stone-400 text-sm mt-2 block">—— 历史证明，时间从不辜负新会陈皮</span>
         </p>
       </div>
@@ -56,8 +57,22 @@
           </div>
         </div>
 
-        <div class="hidden lg:block bg-white p-8 h-[80%] rounded-r-3xl border-r border-y border-stone-200 shadow-sm opacity-60 pointer-events-none">
-          <!-- Visual balance filler -->
+        <!-- Digital Asset -->
+        <div
+          v-motion
+          :initial="{ opacity: 0, x: 30 }"
+          :visibleOnce="{ opacity: 1, x: 0 }"
+          :transition="{ delay: 400 }"
+          class="comparison-card bg-white p-8 rounded-3xl lg:rounded-l-none lg:pl-12 border border-stone-200 shadow-sm transition-all duration-300"
+        >
+          <h3 class="text-2xl font-bold text-stone-900 mb-8 text-center">数字资产</h3>
+          <div class="space-y-6">
+            <ComparisonItem :positive="true" text="从原生到全球流通" />
+            <ComparisonItem :positive="true" text="被记录、被确权、真实可信" />
+            <ComparisonItem :positive="true" text="低门槛入手，全球可参与" />
+            <ComparisonItem :positive="true" text="限量发行，财富前置" />
+            <ComparisonItem :positive="true" text="实物兑换权，随时提货" />
+          </div>
         </div>
       </div>
     </div>

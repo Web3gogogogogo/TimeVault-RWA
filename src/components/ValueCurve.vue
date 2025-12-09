@@ -72,14 +72,14 @@ use([
 // 主体数据（2025-2010年）
 const mainData = [
   { name: '2025 (新皮)', price: 600, label: '600' },
-  { name: '2019 (5年)', price: 3900, label: '3.9k' },
-  { name: '2015 (10年)', price: 5500, label: '5.5k' },
-  { name: '2010 (15年)', price: 20000, label: '20k' },
+  { name: '2019 (5年)', price: 3144, label: '3.9k' },
+  { name: '2015 (10年)', price: 6811, label: '5.5k' },
+  { name: '2010 (15年)', price: 18043, label: '20k' },
 ];
 
 // 早期数据（1987年）
 const earlyData = [
-  { name: '1987 (38年)', price: 3760000, label: '3.76M' },
+  { name: '1987 (39年)', price: 2560000, label: '3.76M' },
 ];
 
 const chartOption = {
@@ -95,7 +95,7 @@ const chartOption = {
     // 右上角独立坐标系（显示1987年）
     {
       left: '65%',
-      right: '5%',
+      right: '8%',
       top: '5%',
       bottom: '60%',
       containLabel: false,
@@ -120,14 +120,24 @@ const chartOption = {
           if (value === '...') return '⋯';
           return value;
         },
+        margin: 18,
       },
       boundaryGap: false,
+      // 主X轴正下方备注，样式与副X轴备注一致
+      name: '*数据参考新会陈皮某品牌官网零售价，2025年的新皮刚刚启动销售，尚未得出准确市场数据*',
+      nameLocation: 'middle',
+      nameGap: 35,
+      nameTextStyle: {
+        color: '#D97706',
+        fontSize: 14,
+        fontWeight: 'bold',
+      },
     },
     // 副X轴（1987年，右上角）
     {
       type: 'category',
       gridIndex: 1,
-      data: ['', '1987 (38年)', ''],
+      data: ['', '1987 (39年)', ''],
       axisLine: { 
         show: true,
         lineStyle: { color: '#D97706', width: 1 },
@@ -140,6 +150,15 @@ const chartOption = {
         showMaxLabel: false,
       },
       boundaryGap: false,
+      // 添加副X轴备注
+      name: '数据来源于2024年助力乡村振兴慈善活动',
+      nameLocation: 'middle',
+      nameGap: 35,
+      nameTextStyle: {
+        color: '#D97706',
+        fontSize: 14,
+        fontWeight: 'bold',
+      },
     },
   ],
   yAxis: [
@@ -164,6 +183,7 @@ const chartOption = {
       axisLabel: {
         color: '#78716C',
         fontSize: 10,
+        margin: 8,
         formatter: (value: number) => {
           if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M`;
           if (value >= 1000) return `${(value / 1000).toFixed(0)}k`;
@@ -188,7 +208,7 @@ const chartOption = {
       if (Array.isArray(params)) {
         const param = params[0];
         if (param.value == null) return '';
-        return `${param.name}<br/>¥${param.value.toLocaleString()} / 50g`;
+        return `${param.name}<br/>¥${param.value.toLocaleString()} / 500g`;
       }
       return '';
     },
