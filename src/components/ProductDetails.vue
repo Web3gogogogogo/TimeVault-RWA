@@ -25,7 +25,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
-                  点击放大
+                  {{ $t('productDetails.clickToZoom') }}
                 </div>
               </div>
             </div>
@@ -41,7 +41,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
-                  点击放大
+                  {{ $t('productDetails.clickToZoom') }}
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
-                  点击放大
+                  {{ $t('productDetails.clickToZoom') }}
                 </div>
               </div>
             </div>
@@ -75,7 +75,7 @@
               />
               <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div class="text-white text-sm font-medium bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
-                  点击放大
+                  {{ $t('productDetails.clickToZoom') }}
                 </div>
               </div>
             </div>
@@ -91,37 +91,37 @@
         >
           <div class="inline-flex items-center space-x-2 text-amber-600 mb-4">
             <ShieldCheck :size="16" />
-            <span class="text-sm tracking-wider uppercase font-bold">Asset backed NFT</span>
+            <span class="text-sm tracking-wider uppercase font-bold">{{ $t('productDetails.badge') }}</span>
           </div>
           
           <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight text-stone-900">
-            每一枚 NFT，都对应<br/>一斤看得见的新会陈皮
+            {{ $t('productDetails.title') }}<br/>{{ $t('productDetails.titleLine2') }}
           </h2>
 
           <div class="space-y-6 font-light text-stone-600 text-lg">
           
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
-              <span>产地</span>
-              <span class="text-stone-900 font-medium">新会核心产区(国家地理标志)</span>
+              <span>{{ $t('productDetails.fields.origin') }}</span>
+              <span class="text-stone-900 font-medium">{{ $t('productDetails.fields.originValue') }}</span>
             </div>
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
-              <span>品种</span>
-              <span class="text-stone-900 font-medium">新会茶枝柑（正宗道地）</span>
+              <span>{{ $t('productDetails.fields.variety') }}</span>
+              <span class="text-stone-900 font-medium">{{ $t('productDetails.fields.varietyValue') }}</span>
             </div>
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
-              <span>标准</span>
+              <span>{{ $t('productDetails.fields.standard') }}</span>
               <span class="text-stone-900 font-medium flex items-center">
-                每筐10斤装2025新皮(初始重量)+链锁
+                {{ $t('productDetails.fields.standardValue') }}
               </span>
             </div>
            
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
-              <span>溯源</span>
-              <span class="text-stone-900 font-medium">RFID物联网+蚂蚁链上链+数据产权证</span>
+              <span>{{ $t('productDetails.fields.traceability') }}</span>
+              <span class="text-stone-900 font-medium">{{ $t('productDetails.fields.traceabilityValue') }}</span>
             </div>
             <div class="flex items-center justify-between pt-2 detail-item">
-              <span>托管</span>
-              <span class="text-amber-600 font-bold">仓储陈化首5年免费</span>
+              <span>{{ $t('productDetails.fields.custody') }}</span>
+              <span class="text-amber-600 font-bold">{{ $t('productDetails.fields.custodyValue') }}</span>
             </div>
           </div>
         </div>

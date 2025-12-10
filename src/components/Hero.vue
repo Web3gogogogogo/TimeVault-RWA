@@ -17,7 +17,7 @@
         class="mb-6"
       >
         <span class="inline-block px-4 py-1.5 border border-amber-600/20 rounded-full bg-amber-500/5 text-amber-700 text-sm tracking-[0.2em] uppercase font-medium">
-          Global First RWA NFT
+          {{ $t('hero.badge') }}
         </span>
       </div>
 
@@ -28,7 +28,7 @@
         :transition="{ duration: 800, delay: 100 }"
         class="text-6xl md:text-8xl lg:text-9xl font-black tracking-tight leading-none mb-4 text-stone-900"
       >
-        陈皮纪元
+        {{ $t('hero.title') }}
       </h1>
 
       <p
@@ -38,7 +38,7 @@
         :transition="{ duration: 800, delay: 200 }"
         class="text-xl md:text-2xl text-stone-500 font-light tracking-wide mb-12 max-w-2xl mx-auto"
       >
-        全球首枚增值型 RWA：新会陈皮创岁纪元 NFT (2025)
+        {{ $t('hero.subtitle') }}
       </p>
 
       <!-- Main Visual - Floating Slice -->
@@ -66,28 +66,28 @@
           
           <!-- Floating Data Points - PC端保持原样 -->
           <div class="pc-data-point absolute top-0 right-0 md:-right-20 bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl z-20">
-            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">APIC</div>
-            <div class="text-2xl font-bold text-amber-600">15-25%</div>
-            <div class="text-xs text-stone-400">自然复利</div>
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">{{ $t('hero.apic') }}</div>
+            <div class="text-2xl font-bold text-amber-600">{{ $t('hero.apicValue') }}</div>
+            <div class="text-xs text-stone-400">{{ $t('hero.apicDesc') }}</div>
           </div>
 
           <div class="pc-data-point absolute bottom-0 left-0 md:-left-20 bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl z-20">
-            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">RWA锚定</div>
-            <div class="text-2xl font-bold text-stone-900">100%实物资产</div>
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">{{ $t('hero.rwaAnchor') }}</div>
+            <div class="text-2xl font-bold text-stone-900">{{ $t('hero.rwaValue') }}</div>
           </div>
         </div>
         
         <!-- Mobile端描述框 - 图片下方水平排列 -->
         <div class="flex md:hidden gap-4 mt-6 justify-center w-full">
           <div class="bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl">
-            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">APIC</div>
-            <div class="text-2xl font-bold text-amber-600">15-25%</div>
-            <div class="text-xs text-stone-400">自然复利</div>
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">{{ $t('hero.apic') }}</div>
+            <div class="text-2xl font-bold text-amber-600">{{ $t('hero.apicValue') }}</div>
+            <div class="text-xs text-stone-400">{{ $t('hero.apicDesc') }}</div>
           </div>
 
           <div class="bg-white/80 backdrop-blur border border-stone-200 p-4 rounded-xl text-left shadow-xl">
-            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">RWA锚定</div>
-            <div class="text-2xl font-bold text-stone-900">100%实物资产</div>
+            <div class="text-xs text-stone-500 mb-1 uppercase tracking-wider">{{ $t('hero.rwaAnchor') }}</div>
+            <div class="text-2xl font-bold text-stone-900">{{ $t('hero.rwaValue') }}</div>
           </div>
         </div>
       </div>
@@ -99,15 +99,15 @@
         :transition="{ duration: 800, delay: 400 }"
         class="flex flex-col items-center space-y-6"
       >
-        <h2 class="text-3xl md:text-5xl font-bold text-stone-800 mb-2">把时间装进钱包</h2>
+        <h2 class="text-3xl md:text-5xl font-bold text-stone-800 mb-2">{{ $t('hero.heading') }}</h2>
         <p class="text-stone-500 max-w-xl">
-          1 枚 NFT = 1 斤 2025 年新会核心产区新皮<br/>
-          <span class="text-amber-600/90 font-medium">限量 66,660 枚（永不再增发）</span>
+          {{ $t('hero.description') }}<br/>
+          <span class="text-amber-600/90 font-medium">{{ $t('hero.limited') }}</span>
         </p>
 
         <button class="orange-button group relative px-10 py-5 text-white font-bold rounded-full transition-all flex items-center space-x-3">
           <Wallet :size="20" />
-          <span>立即购买</span>
+          <span>{{ $t('hero.buyButton') }}</span>
           <ArrowRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
       </div>

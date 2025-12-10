@@ -8,12 +8,12 @@
         class="text-center mb-20"
       >
         <h2 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight text-stone-900">
-          新会陈皮，是东方最硬的<br/><span class="text-amber-600">「软黄金」</span>
+          {{ $t('comparison.title') }}<br/><span class="text-amber-600">{{ $t('comparison.titleHighlight') }}</span>
         </h2>
         <p class="text-stone-500 max-w-2xl mx-auto text-lg">
-          1986年老皮拍卖价50万元/100克<br/>
-          <span class="block">数据来源于2024年助力乡村振兴慈善活动</span>
-          <span class="text-stone-400 text-sm mt-2 block">—— 历史证明，时间从不辜负新会陈皮</span>
+          {{ $t('comparison.subtitle') }}<br/>
+          <span class="block">{{ $t('comparison.subtitleSource') }}</span>
+          <span class="text-stone-400 text-sm mt-2 block">{{ $t('comparison.tagline') }}</span>
         </p>
       </div>
 
@@ -26,13 +26,14 @@
           :transition="{ delay: 200 }"
           class="comparison-card bg-white p-8 rounded-3xl lg:rounded-r-none lg:pr-12 border border-stone-200 shadow-sm transition-all duration-300"
         >
-          <h3 class="text-2xl font-bold text-stone-400 mb-8 text-center">传统资产</h3>
+          <h3 class="text-2xl font-bold text-stone-400 mb-8 text-center">{{ $t('comparison.traditional.title') }}</h3>
           <div class="space-y-6">
-            <ComparisonItem :positive="false" text="流动性差" />
-            <ComparisonItem :positive="false" text="真假难辨" />
-            <ComparisonItem :positive="false" text="动辄几十万起" />
-            <ComparisonItem :positive="false" text="价值靠情绪" />
-            <ComparisonItem :positive="false" text="只能自己存" />
+            <ComparisonItem 
+              v-for="(item, index) in traditionalItems" 
+              :key="index"
+              :positive="false" 
+              :text="item" 
+            />
           </div>
         </div>
 
@@ -45,15 +46,16 @@
           class="comparison-card-rwa bg-[#FAF9F6] p-10 rounded-3xl border-2 border-amber-500/20 shadow-[0_0_40px_rgba(217,119,6,0.08)] z-10 relative -my-4 lg:my-0 transition-all duration-300"
         >
           <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-amber-600 text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
-            New Era
+            {{ $t('comparison.rwa.badge') }}
           </div>
-          <h3 class="text-3xl font-bold text-stone-900 mb-10 text-center">新会陈皮 RWA</h3>
+          <h3 class="text-3xl font-bold text-stone-900 mb-10 text-center">{{ $t('comparison.rwa.title') }}</h3>
           <div class="space-y-8">
-            <ComparisonItem :positive="true" text="7×24 小时全球交易" />
-            <ComparisonItem :positive="true" text="全链溯源 + 蚂蚁链数据产权证书" />
-            <ComparisonItem :positive="true" text="88 USD拥有1斤实物资产" />
-            <ComparisonItem :positive="true" text="时间越久，价值越高（自然复利）" />
-            <ComparisonItem :positive="true" text="五年供销国企陈化仓 + 平安承保" />
+            <ComparisonItem 
+              v-for="(item, index) in rwaItems" 
+              :key="index"
+              :positive="true" 
+              :text="item" 
+            />
           </div>
         </div>
 
@@ -65,13 +67,14 @@
           :transition="{ delay: 400 }"
           class="comparison-card bg-white p-8 rounded-3xl lg:rounded-l-none lg:pl-12 border border-stone-200 shadow-sm transition-all duration-300"
         >
-          <h3 class="text-2xl font-bold text-stone-400 mb-8 text-center">数字资产</h3>
+          <h3 class="text-2xl font-bold text-stone-400 mb-8 text-center">{{ $t('comparison.digital.title') }}</h3>
           <div class="space-y-6">
-            <ComparisonItem :positive="true" text="从原生到全球流通" />
-            <ComparisonItem :positive="true" text="被记录、被确权、真实可信" />
-            <ComparisonItem :positive="true" text="低门槛入手，全球可参与" />
-            <ComparisonItem :positive="true" text="限量发行，财富前置" />
-            <ComparisonItem :positive="true" text="实物兑换权，随时提货" />
+            <ComparisonItem 
+              v-for="(item, index) in digitalItems" 
+              :key="index"
+              :positive="true" 
+              :text="item" 
+            />
           </div>
         </div>
       </div>
@@ -80,7 +83,31 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import i18n from '../i18n';
 import ComparisonItem from './ComparisonItem.vue';
+
+const { locale } = useI18n();
+
+// 直接从i18n实例获取数组，避免t()函数的问题
+const traditionalItems = computed(() => {
+  const messages = (i18n.global.messages.value as any)[locale.value] as any;
+  const items = messages?.comparison?.traditional?.items;
+  return Array.isArray(items) ? items : [];
+});
+
+const rwaItems = computed(() => {
+  const messages = (i18n.global.messages.value as any)[locale.value] as any;
+  const items = messages?.comparison?.rwa?.items;
+  return Array.isArray(items) ? items : [];
+});
+
+const digitalItems = computed(() => {
+  const messages = (i18n.global.messages.value as any)[locale.value] as any;
+  const items = messages?.comparison?.digital?.items;
+  return Array.isArray(items) ? items : [];
+});
 </script>
 
 <style scoped>

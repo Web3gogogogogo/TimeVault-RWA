@@ -9,11 +9,11 @@
           :visibleOnce="{ opacity: 1, y: 0 }"
         >
           <h2 class="text-5xl md:text-7xl font-bold mb-8 text-stone-900">
-            时间，<br/>就是收益率
+            {{ $t('valueCurve.title') }}<br/>{{ $t('valueCurve.titleLine2') }}
           </h2>
           <p class="text-xl text-stone-500 font-light leading-relaxed mb-12">
-            新会陈皮的价值不靠炒作，靠分子结构随时间自我优化。<br/>
-            <span class="text-sm mt-4 block text-stone-400">（挥发油、黄酮含量逐年提升，香气与药效更醇）</span>
+            {{ $t('valueCurve.description') }}<br/>
+            <span class="text-sm mt-4 block text-stone-400">{{ $t('valueCurve.note') }}</span>
           </p>
 
           <div
@@ -24,9 +24,9 @@
             class="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-amber-600/30"
           >
             <div class="text-4xl font-bold text-amber-600 mb-2">25.5%</div>
-            <div class="text-stone-500 text-sm">过去 15 年平均年化增长</div>
+            <div class="text-stone-500 text-sm">{{ $t('valueCurve.growth') }}</div>
             <div class="mt-4 text-xs text-stone-400">
-              且越老越稀缺，曲线只会更陡
+              {{ $t('valueCurve.growthNote') }}
             </div>
           </div>
         </div>
@@ -53,6 +53,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { use } from 'echarts/core';
 import { CanvasRenderer } from 'echarts/renderers';
 import { LineChart } from 'echarts/charts';
@@ -62,6 +63,8 @@ import {
   GridComponent,
 } from 'echarts/components';
 import VChart from 'vue-echarts';
+
+const { t } = useI18n();
 
 use([
   CanvasRenderer,
@@ -96,12 +99,12 @@ onUnmounted(() => {
 });
 
 // 主体数据（2025-2010年）
-const mainData = [
-  { name: '2025 (新皮)', price: 600, label: '600' },
-  { name: '2019 (5年)', price: 3144, label: '3.9k' },
-  { name: '2015 (10年)', price: 6811, label: '5.5k' },
-  { name: '2010 (15年)', price: 18043, label: '20k' },
-];
+const mainData = computed(() => [
+  { name: t('valueCurve.dataPoints.2025'), price: 600, label: '600' },
+  { name: t('valueCurve.dataPoints.2019'), price: 3144, label: '3.9k' },
+  { name: t('valueCurve.dataPoints.2015'), price: 6811, label: '5.5k' },
+  { name: t('valueCurve.dataPoints.2010'), price: 18043, label: '20k' },
+]);
 
 
 const chartOption = computed(() => {
@@ -124,7 +127,7 @@ const chartOption = computed(() => {
     {
       type: 'category',
       gridIndex: 0,
-      data: mainData.map(item => item.name),
+      data: mainData.value.map(item => item.name),
       axisLine: { 
         show: true,
         lineStyle: { color: '#E7E5E4', width: 1 },
@@ -146,8 +149,8 @@ const chartOption = computed(() => {
       },
       // 主X轴正下方备注，样式与副X轴备注一致
       name: isMobile.value 
-        ? '数据参考新会陈皮某品牌官网零售价，\n平均增长率依据此价格测算得出'
-        : '数据参考新会陈皮某品牌官网零售价，平均增长率依据此价格测算得出',
+        ? t('valueCurve.chartNote').replace('，', '，\n')
+        : t('valueCurve.chartNote'),
       nameLocation: 'middle',
       nameGap: isMobile.value ? 45 : 55,
       nameTextStyle: {
@@ -205,7 +208,7 @@ const chartOption = computed(() => {
       type: 'line',
       xAxisIndex: 0,
       yAxisIndex: 0,
-      data: mainData.map(item => item.price),
+      data: mainData.value.map(item => item.price),
       smooth: true,
       lineStyle: {
         color: '#D97706',
@@ -233,7 +236,7 @@ const chartOption = computed(() => {
         data: [
           {
             name: '2010',
-            coord: ['2010 (15年)', 18043],
+            coord: [t('valueCurve.dataPoints.2010'), 18043],
             symbol: 'circle',
             symbolSize: 8,
             itemStyle: {

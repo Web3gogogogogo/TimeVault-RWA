@@ -8,7 +8,7 @@
         class="mb-20"
       >
         <h2 class="text-4xl md:text-6xl font-bold mb-6 text-stone-900">
-          买的不是 NFT<br/>是<span class="text-amber-600">时间的所有权</span>
+          {{ $t('rights.title') }}<br/><span class="text-amber-600">{{ $t('rights.titleHighlight') }}</span>
         </h2>
       </div>
 
@@ -24,8 +24,8 @@
           <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform duration-300 border border-stone-100 shadow-sm flex-shrink-0">
             <Truck :size="24" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2">实物提取</h3>
-          <p class="text-stone-500 text-sm flex-grow">随时全球发货到家</p>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">{{ $t('rights.items.extraction.title') }}</h3>
+          <p class="text-stone-500 text-sm flex-grow">{{ $t('rights.items.extraction.desc') }}</p>
         </div>
 
         <!-- 自然增值 -->
@@ -39,8 +39,8 @@
           <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform duration-300 border border-stone-100 shadow-sm flex-shrink-0">
             <TrendingUp :size="24" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2">自然增值</h3>
-          <p class="text-stone-500 text-sm flex-grow">越存越值，坐享复利</p>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">{{ $t('rights.items.appreciation.title') }}</h3>
+          <p class="text-stone-500 text-sm flex-grow">{{ $t('rights.items.appreciation.desc') }}</p>
         </div>
 
         <!-- DAO 治理 -->
@@ -54,8 +54,8 @@
           <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform duration-300 border border-stone-100 shadow-sm flex-shrink-0">
             <Vote :size="24" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2">DAO 治理</h3>
-          <p class="text-stone-500 text-sm flex-grow">创世会员 1.5× 投票权</p>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">{{ $t('rights.items.dao.title') }}</h3>
+          <p class="text-stone-500 text-sm flex-grow">{{ $t('rights.items.dao.desc') }}</p>
         </div>
 
         <!-- 积分空投 -->
@@ -69,8 +69,8 @@
           <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform duration-300 border border-stone-100 shadow-sm flex-shrink-0">
             <Coins :size="24" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2">积分空投</h3>
-          <p class="text-stone-500 text-sm flex-grow">每持有 1 枚每月 +6 积分</p>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">{{ $t('rights.items.airdrop.title') }}</h3>
+          <p class="text-stone-500 text-sm flex-grow">{{ $t('rights.items.airdrop.desc') }}</p>
         </div>
 
         <!-- 优先认购 -->
@@ -84,8 +84,8 @@
           <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform duration-300 border border-stone-100 shadow-sm flex-shrink-0">
             <Star :size="24" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2">优先认购</h3>
-          <p class="text-stone-500 text-sm flex-grow">未来所有 RWA 项目白名单</p>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">{{ $t('rights.items.priority.title') }}</h3>
+          <p class="text-stone-500 text-sm flex-grow">{{ $t('rights.items.priority.desc') }}</p>
         </div>
 
         <!-- 专属优惠 -->
@@ -99,8 +99,8 @@
           <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-amber-600 mb-6 group-hover:scale-110 transition-transform duration-300 border border-stone-100 shadow-sm flex-shrink-0">
             <Crown :size="24" />
           </div>
-          <h3 class="text-xl font-bold text-stone-900 mb-2">专属待遇</h3>
-          <p class="text-stone-500 text-sm flex-grow">新会陈皮RWA基地研学考察</p>
+          <h3 class="text-xl font-bold text-stone-900 mb-2">{{ $t('rights.items.exclusive.title') }}</h3>
+          <p class="text-stone-500 text-sm flex-grow">{{ $t('rights.items.exclusive.desc') }}</p>
         </div>
       </div>
     </div>

@@ -9,11 +9,11 @@
         class="text-center mb-20"
       >
         <h2 class="text-4xl md:text-6xl font-bold mb-6 text-stone-900">
-          真实锚定与合规披露
+          {{ $t('compliance.title') }}
         </h2>
         <p class="text-stone-500 max-w-2xl mx-auto text-lg">
-          每一份数字资产背后，都有看得见、摸得着的实物保障<br/>
-          <span class="text-stone-400 text-sm mt-2 block">—— 透明、合规、可追溯</span>
+          {{ $t('compliance.subtitle') }}<br/>
+          <span class="text-stone-400 text-sm mt-2 block">{{ $t('compliance.tagline') }}</span>
         </p>
       </div>
 
@@ -36,10 +36,10 @@
                 <Link :size="40" class="text-white" />
               </div>
               <h3 class="text-4xl md:text-5xl font-black text-stone-900 mb-4 tracking-tight">
-                1:1 <span class="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">真实锚定</span>
+                1:1 <span class="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">{{ $t('compliance.anchor.title') }}</span>
               </h3>
               <p class="text-base md:text-lg text-stone-600 max-w-2xl mx-auto font-light">
-                每一份数字资产均对应实物新会陈皮，确保资产真实性与唯一性
+                {{ $t('compliance.anchor.description') }}
               </p>
             </div>
             
@@ -54,7 +54,7 @@
                   <div class="inline-block bg-white p-8 rounded-2xl shadow-lg mb-4 web3-nft-badge border border-stone-200">
                     <div class="text-stone-900 font-black text-5xl md:text-6xl leading-tight">1 NFT</div>
                   </div>
-                  <div class="text-stone-500 text-xs uppercase tracking-[0.2em] font-medium">数字资产</div>
+                  <div class="text-stone-500 text-xs uppercase tracking-[0.2em] font-medium">{{ $t('compliance.anchor.nft') }}</div>
                 </div>
                 
                 <!-- 等号连接 -->
@@ -67,9 +67,9 @@
                 <!-- 实物侧 -->
                 <div class="text-center group">
                   <div class="inline-block bg-white p-8 rounded-2xl shadow-lg mb-4 web3-physical-badge border border-stone-200">
-                    <div class="text-stone-900 font-black text-5xl md:text-6xl leading-tight">1 斤实物<span class="text-2xl md:text-3xl font-normal">（初始重量）</span></div>
+                    <div class="text-stone-900 font-black text-5xl md:text-6xl leading-tight">{{ $t('compliance.anchor.physicalUnit') }}<span class="text-2xl md:text-3xl font-normal">{{ $t('compliance.anchor.initialWeight') }}</span></div>
                   </div>
-                  <div class="text-stone-500 text-xs uppercase tracking-[0.2em] font-medium">新会陈皮</div>
+                  <div class="text-stone-500 text-xs uppercase tracking-[0.2em] font-medium">{{ $t('compliance.anchor.physical') }}</div>
                 </div>
               </div>
             </div>
@@ -80,7 +80,7 @@
                 <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md flex-shrink-0 overflow-hidden">
                   <img :src="logoImg" alt="LOGO" class="w-full h-full object-contain p-1" />
                 </div>
-                <span class="text-xs md:text-sm font-semibold text-center flex-1">每一枚 NFT 均对应中国供销·江门新会陈皮产业园仓储中的真实实物</span>
+                <span class="text-xs md:text-sm font-semibold text-center flex-1">{{ $t('compliance.anchor.guarantee') }}</span>
               </div>
             </div>
           </div>
@@ -96,35 +96,35 @@
         class="mb-20"
       >
         <div class="text-center mb-12">
-          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">完整合规流程</h3>
-          <p class="text-stone-500">上市、确权等完整合规操作，确保每一步都符合监管要求</p>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900 mb-4">{{ $t('compliance.process.title') }}</h3>
+          <p class="text-stone-500">{{ $t('compliance.process.description') }}</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div class="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm text-center">
             <div class="w-16 h-16 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-200 mx-auto mb-6">
               <FileCheck :size="32" />
             </div>
-            <h4 class="text-xl font-bold text-stone-900 mb-3">上市合规</h4>
+            <h4 class="text-xl font-bold text-stone-900 mb-3">{{ $t('compliance.process.listing.title') }}</h4>
             <p class="text-stone-500 text-sm">
-              严格按照监管要求完成项目立项、备案、审核等上市前合规流程
+              {{ $t('compliance.process.listing.desc') }}
             </p>
           </div>
           <div class="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm text-center">
             <div class="w-16 h-16 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-200 mx-auto mb-6">
               <Shield :size="32" />
             </div>
-            <h4 class="text-xl font-bold text-stone-900 mb-3">资产确权</h4>
+            <h4 class="text-xl font-bold text-stone-900 mb-3">{{ $t('compliance.process.rights.title') }}</h4>
             <p class="text-stone-500 text-sm">
-              通过蚂蚁链上链确权，获得数据产权证书，确保数字资产与实物资产的唯一对应关系
+              {{ $t('compliance.process.rights.desc') }}
             </p>
           </div>
           <div class="bg-white p-8 rounded-2xl border border-stone-200 shadow-sm text-center">
             <div class="w-16 h-16 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-200 mx-auto mb-6">
               <CheckCircle :size="32" />
             </div>
-            <h4 class="text-xl font-bold text-stone-900 mb-3">监管合规</h4>
+            <h4 class="text-xl font-bold text-stone-900 mb-3">{{ $t('compliance.process.regulation.title') }}</h4>
             <p class="text-stone-500 text-sm">
-              持续接受监管审查，确保运营合规，保护投资者权益
+              {{ $t('compliance.process.regulation.desc') }}
             </p>
           </div>
         </div>
@@ -144,29 +144,21 @@
             <div class="w-14 h-14 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-200 mr-4">
               <FileText :size="28" />
             </div>
-            <h3 class="text-2xl md:text-3xl font-bold text-stone-900">第三方审计报告</h3>
+            <h3 class="text-2xl md:text-3xl font-bold text-stone-900">{{ $t('compliance.audit.title') }}</h3>
           </div>
           <p class="text-stone-600 leading-relaxed mb-6">
-            由权威第三方审计机构出具的正式审计报告，全面验证项目资产真实性、合规性及运营规范性。
+            {{ $t('compliance.audit.description') }}
           </p>
           <div class="bg-[#F9F7F2] p-4 rounded-xl border border-stone-200">
-            <div class="text-sm text-stone-500 mb-2">审计范围</div>
+            <div class="text-sm text-stone-500 mb-2">{{ $t('compliance.audit.scope') }}</div>
             <ul class="text-stone-700 text-sm space-y-2">
-              <li class="flex items-start">
+              <li 
+                v-for="(item, index) in auditItems" 
+                :key="index"
+                class="flex items-start"
+              >
                 <Check :size="16" class="text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>实物资产盘点与验证</span>
-              </li>
-              <li class="flex items-start">
-                <Check :size="16" class="text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>数字资产与实物资产对应关系</span>
-              </li>
-              <li class="flex items-start">
-                <Check :size="16" class="text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>合规流程执行情况</span>
-              </li>
-              <li class="flex items-start">
-                <Check :size="16" class="text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>资金流向与使用合规性</span>
+                <span>{{ item }}</span>
               </li>
             </ul>
           </div>
@@ -184,29 +176,21 @@
             <div class="w-14 h-14 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-200 mr-4">
               <Scale :size="28" />
             </div>
-            <h3 class="text-2xl md:text-3xl font-bold text-stone-900">法律意见书</h3>
+            <h3 class="text-2xl md:text-3xl font-bold text-stone-900">{{ $t('compliance.legal.title') }}</h3>
           </div>
           <p class="text-stone-600 leading-relaxed mb-6">
-            由知名律师事务所出具的正式法律意见书，从法律层面确认项目合规性、资产确权有效性及投资者权益保障。
+            {{ $t('compliance.legal.description') }}
           </p>
           <div class="bg-[#F9F7F2] p-4 rounded-xl border border-stone-200">
-            <div class="text-sm text-stone-500 mb-2">法律意见要点</div>
+            <div class="text-sm text-stone-500 mb-2">{{ $t('compliance.legal.points') }}</div>
             <ul class="text-stone-700 text-sm space-y-2">
-              <li class="flex items-start">
+              <li 
+                v-for="(item, index) in legalItems" 
+                :key="index"
+                class="flex items-start"
+              >
                 <Check :size="16" class="text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>项目主体资质合法性</span>
-              </li>
-              <li class="flex items-start">
-                <Check :size="16" class="text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>数字资产发行合规性</span>
-              </li>
-              <li class="flex items-start">
-                <Check :size="16" class="text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>资产确权法律效力</span>
-              </li>
-              <li class="flex items-start">
-                <Check :size="16" class="text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span>投资者权益保障机制</span>
+                <span>{{ item }}</span>
               </li>
             </ul>
           </div>
@@ -225,25 +209,22 @@
           <div class="w-16 h-16 rounded-full bg-amber-50 flex items-center justify-center text-amber-600 border border-amber-200 mr-4">
             <Warehouse :size="32" />
           </div>
-          <h3 class="text-3xl md:text-4xl font-bold text-stone-900">仓储季度披露</h3>
+          <h3 class="text-3xl md:text-4xl font-bold text-stone-900">{{ $t('compliance.warehouse.title') }}</h3>
         </div>
         <p class="text-xl text-stone-600 leading-relaxed mb-8">
-          定期披露陈皮仓储情况，确保资产透明度与可追溯性。
+          {{ $t('compliance.warehouse.description') }}
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="bg-[#F9F7F2] p-6 rounded-2xl border border-stone-200">
-            <div class="text-amber-600 font-bold text-lg mb-3">披露频率</div>
+            <div class="text-amber-600 font-bold text-lg mb-3">{{ $t('compliance.warehouse.frequency.title') }}</div>
             <div class="text-stone-700">
-              每季度定期披露仓储情况，包括库存数量、仓储环境、保险状态等关键信息
+              {{ $t('compliance.warehouse.frequency.desc') }}
             </div>
           </div>
           <div class="bg-[#F9F7F2] p-6 rounded-2xl border border-stone-200">
-            <div class="text-amber-600 font-bold text-lg mb-3">披露内容</div>
+            <div class="text-amber-600 font-bold text-lg mb-3">{{ $t('compliance.warehouse.content.title') }}</div>
             <ul class="text-stone-700 text-sm space-y-2">
-              <li>• 实物库存盘点报告</li>
-              <li>• 仓储环境监测数据</li>
-              <li>• 保险保单状态更新</li>
-              <li>• 第三方监管报告</li>
+              <li v-for="(item, index) in warehouseContentItems" :key="index">• {{ item }}</li>
             </ul>
           </div>
         </div>
@@ -251,7 +232,7 @@
           <div class="flex items-start">
             <Info :size="20" class="text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
             <div class="text-stone-700 text-sm">
-              <strong class="text-amber-700">仓储保障：</strong>所有实物新会陈皮均存储于中国供销·广东新会3.6万㎡陈皮产业园的国企陈化仓，并由中国平安财产险承保，确保资产安全。
+              <strong class="text-amber-700">{{ $t('compliance.warehouse.guarantee.title') }}</strong>{{ $t('compliance.warehouse.guarantee.text') }}
             </div>
           </div>
         </div>
@@ -261,8 +242,32 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+import i18n from '../i18n';
 import { Link, FileCheck, Shield, CheckCircle, FileText, Scale, Check, Warehouse, Info } from 'lucide-vue-next';
 import logoImg from '../assets/LOGO.png';
+
+const { locale } = useI18n();
+
+// 直接从i18n实例获取数组，避免t()函数的问题
+const auditItems = computed(() => {
+  const messages = (i18n.global.messages.value as any)[locale.value] as any;
+  const items = messages?.compliance?.audit?.items;
+  return Array.isArray(items) ? items : [];
+});
+
+const legalItems = computed(() => {
+  const messages = (i18n.global.messages.value as any)[locale.value] as any;
+  const items = messages?.compliance?.legal?.items;
+  return Array.isArray(items) ? items : [];
+});
+
+const warehouseContentItems = computed(() => {
+  const messages = (i18n.global.messages.value as any)[locale.value] as any;
+  const items = messages?.compliance?.warehouse?.content?.items;
+  return Array.isArray(items) ? items : [];
+});
 </script>
 
 <style scoped>

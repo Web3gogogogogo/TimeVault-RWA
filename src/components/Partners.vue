@@ -41,6 +41,8 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import logoSupplyCoop from '../assets/中国供销合作社.png';
 import logoJiangmen from '../assets/江门新会陈皮产业园.png';
 import logoAntChain from '../assets/蚂蚁链.png';
@@ -48,32 +50,34 @@ import logoPingAn from '../assets/中国平安.png';
 import logoEthereum from '../assets/ethereum.png';
 import logoPolygon from '../assets/polygon.png';
 
-const partners = [
+const { t } = useI18n();
+
+const partners = computed(() => [
   { 
-    name: '中国供销合作社',
+    name: t('partners.supplyCoop'),
     logo: logoSupplyCoop
   },
   { 
-    name: '江门新会陈皮产业园',
+    name: t('partners.jiangmen'),
     logo: logoJiangmen
   },
   { 
-    name: '蚂蚁链 (AntChain)',
+    name: t('partners.antChain'),
     logo: logoAntChain
   },
   { 
-    name: '中国平安 (Ping An)',
+    name: t('partners.pingAn'),
     logo: logoPingAn
   },
   { 
-    name: 'Ethereum',
+    name: t('partners.ethereum'),
     logo: logoEthereum
   },
   { 
-    name: 'Polygon',
+    name: t('partners.polygon'),
     logo: logoPolygon
   }
-];
+]);
 </script>
 
 <style scoped>

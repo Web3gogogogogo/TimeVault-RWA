@@ -12,21 +12,21 @@
             <img :src="logoImg" alt="陈皮纪元 Logo" class="w-full h-full object-contain" />
           </div>
           <div>
-            <div class="text-lg font-bold text-stone-900 leading-tight">陈皮纪元</div>
-            <div class="text-[10px] text-stone-500 tracking-wider uppercase">CHENPI GENESIS</div>
+            <div class="text-lg font-bold text-stone-900 leading-tight">{{ $t('brand.name') }}</div>
+            <div class="text-[10px] text-stone-500 tracking-wider uppercase">{{ $t('brand.subname') }}</div>
           </div>
         </div>
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-8">
           <a href="#" class="nav-link text-stone-600 hover:text-stone-900 transition-colors text-sm">
-            白皮书
+            {{ $t('nav.whitepaper') }}
           </a>
           <a href="#" class="nav-link text-stone-600 hover:text-stone-900 transition-colors text-sm">
-            审计报告
+            {{ $t('nav.audit') }}
           </a>
           <a href="#" class="nav-link text-stone-600 hover:text-stone-900 transition-colors text-sm">
-            社区
+            {{ $t('nav.community') }}
           </a>
           
           <div class="relative" ref="dropdownRef">
@@ -35,26 +35,26 @@
               class="nav-link flex items-center space-x-1.5 text-stone-600 hover:text-stone-900 transition-colors text-sm outline-none"
             >
               <Globe :size="16" />
-              <span>{{ language }}</span>
+              <span>{{ currentLanguageLabel }}</span>
             </button>
             <div
               v-if="dropdownOpen"
               class="absolute right-0 mt-2 dropdown-glass rounded-lg border border-stone-200/60 shadow-xl py-1 z-50"
             >
               <button
-                @click="setLanguage('简体')"
+                @click="setLanguage('zh-CN')"
                 class="w-full text-left px-4 py-2 text-sm hover:bg-stone-50 transition-colors whitespace-nowrap"
               >
                 简体中文
               </button>
               <button
-                @click="setLanguage('繁体')"
+                @click="setLanguage('zh-TW')"
                 class="w-full text-left px-4 py-2 text-sm hover:bg-stone-50 transition-colors whitespace-nowrap"
               >
                 繁體中文
               </button>
               <button
-                @click="setLanguage('EN')"
+                @click="setLanguage('en')"
                 class="w-full text-left px-4 py-2 text-sm hover:bg-stone-50 transition-colors whitespace-nowrap"
               >
                 English
@@ -64,7 +64,7 @@
 
           <button class="orange-button px-5 py-2 text-white rounded-full transition-colors text-sm font-medium flex items-center space-x-2">
             <Wallet :size="16" />
-            <span>立即购买</span>
+            <span>{{ $t('nav.buyNow') }}</span>
           </button>
         </div>
 
@@ -81,40 +81,40 @@
       <!-- Mobile Menu -->
       <div v-if="mobileMenuOpen" class="md:hidden py-6 space-y-4 border-t border-stone-200">
         <a href="#" class="block text-stone-600 hover:text-stone-900 transition-colors text-base">
-          白皮书
+          {{ $t('nav.whitepaper') }}
         </a>
         <a href="#" class="block text-stone-600 hover:text-stone-900 transition-colors text-base">
-          审计报告
+          {{ $t('nav.audit') }}
         </a>
         <a href="#" class="block text-stone-600 hover:text-stone-900 transition-colors text-base">
-          社区
+          {{ $t('nav.community') }}
         </a>
         
         <div class="flex items-center space-x-4 py-2">
-          <span class="text-stone-500 text-sm">语言:</span>
+          <span class="text-stone-500 text-sm">{{ $t('nav.language') }}:</span>
           <button 
-            @click="setLanguage('简体')" 
+            @click="setLanguage('zh-CN')" 
             :class="[
               'px-3 py-1 rounded text-sm transition-colors',
-              language === '简体' ? 'bg-stone-200 text-stone-900' : 'text-stone-500 hover:bg-stone-50'
+              locale === 'zh-CN' ? 'bg-stone-200 text-stone-900' : 'text-stone-500 hover:bg-stone-50'
             ]"
           >
             简
           </button>
           <button 
-            @click="setLanguage('繁体')" 
+            @click="setLanguage('zh-TW')" 
             :class="[
               'px-3 py-1 rounded text-sm transition-colors',
-              language === '繁体' ? 'bg-stone-200 text-stone-900' : 'text-stone-500 hover:bg-stone-50'
+              locale === 'zh-TW' ? 'bg-stone-200 text-stone-900' : 'text-stone-500 hover:bg-stone-50'
             ]"
           >
             繁
           </button>
           <button 
-            @click="setLanguage('EN')" 
+            @click="setLanguage('en')" 
             :class="[
               'px-3 py-1 rounded text-sm transition-colors',
-              language === 'EN' ? 'bg-stone-200 text-stone-900' : 'text-stone-500 hover:bg-stone-50'
+              locale === 'en' ? 'bg-stone-200 text-stone-900' : 'text-stone-500 hover:bg-stone-50'
             ]"
           >
             EN
@@ -123,7 +123,7 @@
 
         <button class="orange-button w-full px-5 py-3 text-white rounded-full transition-colors font-medium flex items-center justify-center space-x-2">
           <Wallet :size="18" />
-          <span>立即购买</span>
+          <span>{{ $t('nav.buyNow') }}</span>
         </button>
       </div>
     </div>
@@ -131,7 +131,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { Menu, X, Wallet, Globe } from 'lucide-vue-next';
 import logoImg from '../assets/LOGO.png';
 
@@ -139,13 +140,22 @@ defineProps<{
   scrolled: boolean;
 }>();
 
+const { locale } = useI18n();
 const mobileMenuOpen = ref(false);
-const language = ref('简体');
 const dropdownOpen = ref(false);
 const dropdownRef = ref<HTMLElement | null>(null);
 
+const currentLanguageLabel = computed(() => {
+  if (locale.value === 'zh-CN') return '简';
+  if (locale.value === 'zh-TW') return '繁';
+  return 'EN';
+});
+
 const setLanguage = (lang: string) => {
-  language.value = lang;
+  locale.value = lang;
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('app-locale', lang);
+  }
   dropdownOpen.value = false;
 };
 

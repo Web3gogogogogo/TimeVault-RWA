@@ -8,7 +8,7 @@
           :visibleOnce="{ opacity: 1, x: 0 }"
           class="lg:col-span-4"
         >
-          <h2 class="text-4xl font-bold sticky top-32 text-stone-900">路线图</h2>
+          <h2 class="text-4xl font-bold sticky top-32 text-stone-900">{{ $t('roadmap.title') }}</h2>
         </div>
         
         <div class="lg:col-span-8 relative border-l border-stone-200 pl-8 md:pl-16 space-y-20">
@@ -33,12 +33,33 @@
 </template>
 
 <script setup lang="ts">
-const steps = [
-  { year: '2025', title: '创岁纪元首发', desc: '66,660 枚 Genesis NFT 发售' },
-  { year: '2026', title: 'DAO 上线', desc: '积分通证化 & 社区治理开启' },
-  { year: '2027', title: '金融层解锁', desc: '质押借贷、文旅合作生态打通' },
-  { year: '2028+', title: '全球生态', desc: '50+ 城市节点 + 药食同源 RWA 生态' },
-];
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+
+const steps = computed(() => [
+  { 
+    year: '2025', 
+    title: t('roadmap.steps.2025.title'), 
+    desc: t('roadmap.steps.2025.desc') 
+  },
+  { 
+    year: '2026', 
+    title: t('roadmap.steps.2026.title'), 
+    desc: t('roadmap.steps.2026.desc') 
+  },
+  { 
+    year: '2027', 
+    title: t('roadmap.steps.2027.title'), 
+    desc: t('roadmap.steps.2027.desc') 
+  },
+  { 
+    year: '2028+', 
+    title: t('roadmap.steps.2028+.title'), 
+    desc: t('roadmap.steps.2028+.desc') 
+  },
+]);
 </script>
 
 <style scoped>

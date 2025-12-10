@@ -10,22 +10,22 @@
         class="text-center mb-32"
       >
         <h2 class="text-5xl md:text-7xl font-bold mb-8 text-stone-900">
-          66,660 枚，卖完即止
+          {{ $t('footer.cta.title') }}
         </h2>
         <p class="text-xl text-stone-500 mb-12 font-light">
-          把 2025 年的时间，装进你的钱包
+          {{ $t('footer.cta.description') }}
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
           <button class="footer-cta-button orange-button px-12 py-5 text-white font-bold rounded-full transition-all duration-300 text-lg w-full sm:w-auto shadow-lg">
-            立即购买 (88 USD)
+            {{ $t('footer.cta.button') }}
           </button>
         </div>
         <div class="mt-12 flex flex-wrap justify-center gap-8 text-sm text-stone-500 uppercase tracking-wider">
-          <a href="#" class="footer-link hover:text-stone-900 transition-colors">查看白皮书</a>
+          <a href="#" class="footer-link hover:text-stone-900 transition-colors">{{ $t('footer.links.whitepaper') }}</a>
           <span class="text-stone-300">|</span>
-          <a href="#" class="footer-link hover:text-stone-900 transition-colors">加入社区</a>
+          <a href="#" class="footer-link hover:text-stone-900 transition-colors">{{ $t('footer.links.community') }}</a>
           <span class="text-stone-300">|</span>
-          <a href="#" class="footer-link hover:text-stone-900 transition-colors">实时仓库监控</a>
+          <a href="#" class="footer-link hover:text-stone-900 transition-colors">{{ $t('footer.links.monitoring') }}</a>
         </div>
       </div>
 
@@ -45,11 +45,11 @@
         </div>
         <div class="text-center md:text-right space-y-2">
           <div class="text-stone-500 text-sm">
-            © 2025 陈皮纪元. All rights reserved.
+            {{ $t('footer.copyright') }}
           </div>
           <div class="text-stone-400 text-xs max-w-md ml-auto">
-            新会陈皮创岁纪元 NFT 并非证券，仅为真实资产数字所有权凭证<br/>
-            风险提示：资产价格受市场波动影响，请理性参与
+            {{ $t('footer.disclaimer') }}<br/>
+            {{ $t('footer.risk') }}
           </div>
         </div>
       </div>
