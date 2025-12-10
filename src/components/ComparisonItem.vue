@@ -4,7 +4,7 @@
       <Check v-if="positive" :size="12" />
       <X v-else :size="12" />
     </div>
-    <span :class="['text-lg', positive ? 'text-stone-900 font-medium' : 'text-stone-400']">{{ text }}</span>
+    <span :class="['text-lg', textColor === 'gray' ? 'text-stone-400' : (positive ? 'text-stone-900 font-medium' : 'text-stone-400')]">{{ text }}</span>
   </div>
 </template>
 
@@ -14,6 +14,7 @@ import { Check, X } from 'lucide-vue-next';
 defineProps<{
   text: string;
   positive: boolean;
+  textColor?: 'default' | 'gray';
 }>();
 </script>
 

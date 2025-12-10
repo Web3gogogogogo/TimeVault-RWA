@@ -73,7 +73,8 @@
               v-for="(item, index) in digitalItems" 
               :key="index"
               :positive="true" 
-              :text="item" 
+              :text="item"
+              text-color="gray"
             />
           </div>
         </div>
