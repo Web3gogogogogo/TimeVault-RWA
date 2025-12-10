@@ -146,15 +146,15 @@ const chartOption = computed(() => {
       },
       // 主X轴正下方备注，样式与副X轴备注一致
       name: isMobile.value 
-        ? '数据参考新会陈皮某品牌官网零售价，\n2025年的新皮刚刚启动销售，尚未得出准确市场数据'
-        : '数据参考新会陈皮某品牌官网零售价，\n2025年的新皮刚刚启动销售，尚未得出准确市场数据',
+        ? '数据参考新会陈皮某品牌官网零售价，\n平均增长率依据此价格测算得出'
+        : '数据参考新会陈皮某品牌官网零售价，平均增长率依据此价格测算得出',
       nameLocation: 'middle',
-      nameGap: isMobile.value ? 40 : 55,
+      nameGap: isMobile.value ? 45 : 55,
       nameTextStyle: {
         color: '#D97706',
-        fontSize: isMobile.value ? 16 : 14,
+        fontSize: isMobile.value ? 16 : 16,
         fontWeight: 'bold',
-        lineHeight: isMobile.value ? 18 : 16,
+        lineHeight: isMobile.value ? 20 : 16,
       },
     },
   ],

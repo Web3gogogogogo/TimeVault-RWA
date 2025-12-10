@@ -67,11 +67,11 @@
         >
           <h3 class="text-2xl font-bold text-stone-400 mb-8 text-center">数字资产</h3>
           <div class="space-y-6">
-            <ComparisonItem :positive="false" text="从原生到全球流通" />
-            <ComparisonItem :positive="false" text="被记录、被确权、真实可信" />
-            <ComparisonItem :positive="false" text="低门槛入手，全球可参与" />
-            <ComparisonItem :positive="false" text="限量发行，财富前置" />
-            <ComparisonItem :positive="false" text="实物兑换权，随时提货" />
+            <ComparisonItem :positive="true" text="从原生到全球流通" />
+            <ComparisonItem :positive="true" text="被记录、被确权、真实可信" />
+            <ComparisonItem :positive="true" text="低门槛入手，全球可参与" />
+            <ComparisonItem :positive="true" text="限量发行，财富前置" />
+            <ComparisonItem :positive="true" text="实物兑换权，随时提货" />
           </div>
         </div>
       </div>
