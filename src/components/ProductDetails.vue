@@ -101,6 +101,10 @@
           <div class="space-y-6 font-light text-stone-600 text-lg">
           
             <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
+              <span>产地</span>
+              <span class="text-stone-900 font-medium">新会核心产区(国家地理标志)</span>
+            </div>
+            <div class="flex items-center justify-between border-b border-stone-200 pb-4 detail-item">
               <span>品种</span>
               <span class="text-stone-900 font-medium">新会茶枝柑（正宗道地）</span>
             </div>

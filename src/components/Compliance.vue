@@ -251,7 +251,7 @@
           <div class="flex items-start">
             <Info :size="20" class="text-amber-600 mr-3 mt-0.5 flex-shrink-0" />
             <div class="text-stone-700 text-sm">
-              <strong class="text-amber-700">仓储保障：</strong>所有实物新会陈皮均存储于中国供销·江门新会陈皮产业园的3.6万㎡国企陈化仓，并由中国平安财产险承保，确保资产安全。
+              <strong class="text-amber-700">仓储保障：</strong>所有实物新会陈皮均存储于中国供销·广东新会3.6万㎡陈皮产业园的国企陈化仓，并由中国平安财产险承保，确保资产安全。
             </div>
           </div>
         </div>
