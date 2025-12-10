@@ -1,0 +1,81 @@
+name: Deploy to Production Server
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT || 22 }}
+          source: "dist/*"
+          target: "/tmp/timevault-deploy"
+          strip_components: 0
+
+      - name: Execute deployment script
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          port: ${{ secrets.SERVER_PORT || 22 }}
+          script: |
+            # 备份当前版本
+            if [ -d "/var/www/chenpirwa" ]; then
+              BACKUP_DIR="/var/www/chenpirwa.backup.$(date +%Y%m%d_%H%M%S)"
+              cp -r /var/www/chenpirwa "$BACKUP_DIR"
+              echo "已备份到: $BACKUP_DIR"
+            fi
+            
+            # 清空目标目录
+            rm -rf /var/www/chenpirwa/*
+            rm -f /var/www/chenpirwa/.* 2>/dev/null || true
+            
+            # 复制新文件
+            cp -r /tmp/timevault-deploy/* /var/www/chenpirwa/
+            
+            # 设置权限
+            chown -R nginx:nginx /var/www/chenpirwa
+            chmod -R 755 /var/www/chenpirwa
+            
+            # 清理临时文件
+            rm -rf /tmp/timevault-deploy
+            
+            # 重新加载 Nginx
+            nginx -t && systemctl reload nginx
+            
+            echo "部署完成！"
+            echo "部署时间: $(date)"
+            echo "部署目录: /var/www/chenpirwa"
+            ls -lh /var/www/chenpirwa/ | head -5
+
+      - name: Deployment success
+        run: |
+          echo "✅ 部署成功完成！"
+          echo "网站地址: https://chenpigenesis.io"
+
