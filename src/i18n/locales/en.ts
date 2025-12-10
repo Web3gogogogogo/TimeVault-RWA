@@ -9,13 +9,13 @@ export default {
   },
   // Brand name (keep consistent)
   brand: {
-    name: '陈皮纪元',
+    name: 'Chenpi Genesis',
     subname: 'CHENPI GENESIS',
   },
   // Hero section
   hero: {
     badge: 'Global First RWA NFT',
-    title: '陈皮纪元',
+    title: 'Chenpi Genesis',
     subtitle: 'World\'s First Appreciating RWA: Xinhui Tangerine Peel Genesis Era NFT (2025)',
     apic: 'APIC',
     apicValue: '15-25%',
@@ -249,7 +249,7 @@ export default {
       community: 'Join Community',
       monitoring: 'Real-time Warehouse Monitoring',
     },
-    copyright: '© 2025 陈皮纪元. All rights reserved.',
+    copyright: '© 2025 Chenpi genesis. All rights reserved.',
     disclaimer: 'Xinhui Tangerine Peel Genesis Era NFT is not a security, only a digital ownership certificate of real assets',
     risk: 'Risk Warning: Asset prices are affected by market fluctuations, please participate rationally',
   },
