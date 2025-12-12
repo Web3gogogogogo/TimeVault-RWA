@@ -16,7 +16,7 @@ export default {
   hero: {
     badge: 'Global First RWA NFT',
     title: 'Chenpi Genesis',
-    subtitle: 'World\'s First Appreciating RWA: Xinhui Tangerine Peel Genesis Era NFT (2025)',
+    subtitle: 'World\'s First Appreciating RWA: Xinhui Chenpi Genesis Era NFT (2025)',
     apic: 'APIC',
     apicValue: '15-25%',
     apicDesc: 'Natural Compound Interest',
@@ -34,12 +34,12 @@ export default {
     tagline: '— Transparent, Compliant, Traceable',
     anchor: {
       title: 'Real Asset Backing',
-      description: 'Each digital asset corresponds to physical Xinhui tangerine peel, ensuring asset authenticity and uniqueness',
+      description: 'Each digital asset corresponds to physical Xinhui chenpi, ensuring asset authenticity and uniqueness',
       nft: 'Digital Asset',
-      physical: 'Xinhui Tangerine Peel',
+      physical: 'Xinhui Chenpi',
       physicalUnit: '1 Jin Physical',
       initialWeight: '(Initial Weight)',
-      guarantee: 'Each NFT corresponds to real physical assets stored in China Supply & Marketing Cooperative · Jiangmen Xinhui Tangerine Peel Industrial Park warehouse',
+      guarantee: 'Each NFT corresponds to real physical assets stored in China Supply & Marketing Cooperative · Jiangmen Xinhui Chenpi Industrial Park warehouse',
     },
     process: {
       title: 'Complete Compliance Process',
@@ -81,7 +81,7 @@ export default {
     },
     warehouse: {
       title: 'Warehouse Quarterly Disclosure',
-      description: 'Regular disclosure of tangerine peel storage conditions to ensure asset transparency and traceability.',
+      description: 'Regular disclosure of chenpi storage conditions to ensure asset transparency and traceability.',
       frequency: {
         title: 'Disclosure Frequency',
         desc: 'Quarterly disclosure of storage conditions, including inventory quantity, storage environment, insurance status and other key information',
@@ -97,17 +97,17 @@ export default {
       },
       guarantee: {
         title: 'Storage Guarantee:',
-        text: 'All physical Xinhui tangerine peel is stored in the state-owned enterprise aging warehouse of China Supply & Marketing Cooperative · Guangdong Xinhui 36,000㎡ Tangerine Peel Industrial Park, and insured by China Ping An Property Insurance to ensure asset safety.',
+        text: 'All physical Xinhui chenpi is stored in the state-owned enterprise aging warehouse of China Supply & Marketing Cooperative · Guangdong Xinhui 36,000㎡ Chenpi Industrial Park, and insured by China Ping An Property Insurance to ensure asset safety.',
       },
     },
   },
   // Comparison section
   comparison: {
-    title: 'Xinhui Tangerine Peel, the Hardest',
+    title: 'Xinhui Chenpi, the Hardest',
     titleHighlight: '「Soft Gold」in the East',
     subtitle: '1986 vintage peel auction price: 500,000 CNY / 100g',
     subtitleSource: 'Data from 2024 Rural Revitalization Charity Event',
-    tagline: '— History proves that time never fails Xinhui tangerine peel',
+    tagline: '— History proves that time never fails Xinhui chenpi',
     traditional: {
       title: 'Traditional Assets',
       items: [
@@ -120,7 +120,7 @@ export default {
     },
     rwa: {
       badge: 'New Era',
-      title: 'Xinhui Tangerine Peel RWA',
+      title: 'Xinhui Chenpi RWA',
       items: [
         '7×24 hour global trading',
         'Full-chain traceability + AntChain data property rights certificate',
@@ -144,7 +144,7 @@ export default {
   productDetails: {
     badge: 'Asset backed NFT',
     title: 'Each NFT corresponds to',
-    titleLine2: 'one jin of visible Xinhui tangerine peel',
+    titleLine2: 'one jin of visible Xinhui chenpi',
     clickToZoom: 'Click to zoom',
     fields: {
       origin: 'Origin',
@@ -163,11 +163,11 @@ export default {
   valueCurve: {
     title: 'Time,',
     titleLine2: 'is the return rate',
-    description: 'The value of Xinhui tangerine peel does not rely on speculation, but on the molecular structure optimizing itself over time.',
+    description: 'The value of Xinhui chenpi does not rely on speculation, but on the molecular structure optimizing itself over time.',
     note: '(Volatile oil and flavonoid content increase year by year, aroma and efficacy become more mellow)',
     growth: 'Average annual growth over the past 15 years',
     growthNote: 'The older it gets, the scarcer it becomes, and the curve will only be steeper',
-    chartNote: 'Data refers to retail prices on a certain brand\'s official website of Xinhui tangerine peel, average growth rate calculated based on this price',
+    chartNote: 'Data refers to retail prices on a certain brand\'s official website of Xinhui chenpi, average growth rate calculated based on this price',
     dataPoints: {
       '2025': '2025 (New Peel)',
       '2019': '2019 (5 Years)',
@@ -202,7 +202,7 @@ export default {
       },
       exclusive: {
         title: 'Exclusive Benefits',
-        desc: 'Xinhui Tangerine Peel RWA base research and study tour',
+        desc: 'Xinhui Chenpi RWA base research and study tour',
       },
     },
   },
@@ -231,7 +231,7 @@ export default {
   // Partners
   partners: {
     supplyCoop: 'China Supply & Marketing Cooperative',
-    jiangmen: 'Jiangmen Xinhui Tangerine Peel Industrial Park',
+    jiangmen: 'Jiangmen Xinhui Chenpi Industrial Park',
     antChain: 'AntChain',
     pingAn: 'China Ping An',
     ethereum: 'Ethereum',
@@ -250,7 +250,7 @@ export default {
       monitoring: 'Real-time Warehouse Monitoring',
     },
     copyright: '© 2025 Chenpi genesis. All rights reserved.',
-    disclaimer: 'Xinhui Tangerine Peel Genesis Era NFT is not a security, only a digital ownership certificate of real assets',
+    disclaimer: 'Xinhui Chenpi Genesis Era NFT is not a security, only a digital ownership certificate of real assets',
     risk: 'Risk Warning: Asset prices are affected by market fluctuations, please participate rationally',
   },
 };
