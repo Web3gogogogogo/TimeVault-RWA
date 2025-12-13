@@ -24,7 +24,7 @@ export default {
     rwaValue: '100%實物資產',
     heading: '把時間裝進錢包',
     description: '1 枚 NFT = 1 斤 2025 年新會核心產區新皮',
-    limited: '限量 66,660 枚（永不再增發）',
+    limited: '限量 66,660 NFTs（永不再增發）',
     buyButton: '立即購買',
   },
   // 合規披露
@@ -212,7 +212,7 @@ export default {
     steps: {
       '2025': {
         title: '創歲紀元首發',
-        desc: '66,660 枚 Genesis NFT 發售',
+        desc: '66,660 Genesis NFTs 發售',
       },
       '2026': {
         title: 'DAO 上線',
@@ -224,7 +224,7 @@ export default {
       },
       '2028+': {
         title: '全球生態',
-        desc: '50+ 城市節點 + 藥食同源 RWA 生態',
+        desc: '50+ 全球城市節點 + 藥食同源 RWA 生態',
       },
     },
   },
@@ -240,7 +240,7 @@ export default {
   // 頁腳
   footer: {
     cta: {
-      title: '66,660 枚，賣完即止',
+      title: '66,660 NFTs，賣完即止',
       description: '把 2025 年的時間，裝進你的錢包',
       button: '立即購買 (88 USD)',
     },

@@ -24,7 +24,7 @@ export default {
     rwaValue: '100% Physical Asset',
     heading: 'Put Time in Your Wallet',
     description: '1 NFT = 1 Jin (500g) of 2025 Xinhui Core Region New Peel',
-    limited: 'Limited to 66,660 pieces (No additional issuance)',
+    limited: 'Limited to 66,660 NFTs (No additional issuance)',
     buyButton: 'Buy Now',
   },
   // Compliance disclosure
@@ -39,7 +39,7 @@ export default {
       physical: 'Xinhui Chenpi',
       physicalUnit: '1 Jin Physical',
       initialWeight: '(Initial Weight)',
-      guarantee: 'Each NFT corresponds to real physical assets stored in China Supply & Marketing Cooperative · Jiangmen Xinhui Chenpi Industrial Park warehouse',
+      guarantee: 'Each NFT corresponds to real physical assets stored in China Supply & Marketing Cooperatives · Jiangmen Xinhui Chenpi Industrial Park warehouse',
     },
     process: {
       title: 'Complete Compliance Process',
@@ -97,7 +97,7 @@ export default {
       },
       guarantee: {
         title: 'Storage Guarantee:',
-        text: 'All physical Xinhui chenpi is stored in the state-owned enterprise aging warehouse of China Supply & Marketing Cooperative · Guangdong Xinhui 36,000㎡ Chenpi Industrial Park, and insured by China Ping An Property Insurance to ensure asset safety.',
+        text: 'All physical Xinhui chenpi is stored in the state-owned enterprise aging warehouse of China Supply & Marketing  Cooperatives · Guangdong Xinhui 36,000㎡ Chenpi Industrial Park, and insured by China Ping An Property Insurance to ensure asset safety.',
       },
     },
   },
@@ -167,7 +167,7 @@ export default {
     note: '(Volatile oil and flavonoid content increase year by year, aroma and efficacy become more mellow)',
     growth: 'Average annual growth over the past 15 years',
     growthNote: 'The older it gets, the scarcer it becomes, and the curve will only be steeper',
-    chartNote: 'Data refers to retail prices on a certain brand\'s official website of Xinhui chenpi, average growth rate calculated based on this price',
+    chartNote: 'Data refers to retail prices on a certain brand\'s official website of Xinhui chenpi,\naverage growth rate calculated based on this price',
     dataPoints: {
       '2025': '2025 (New Peel)',
       '2019': '2019 (5 Years)',
@@ -177,7 +177,7 @@ export default {
   },
   // Rights
   rights: {
-    title: 'Not buying NFT,',
+    title: 'Buying not only NFT,',
     titleHighlight: 'but ownership of time',
     items: {
       extraction: {
@@ -212,7 +212,7 @@ export default {
     steps: {
       '2025': {
         title: 'Genesis Era Launch',
-        desc: '66,660 Genesis NFT sale',
+        desc: '66,660 Genesis NFT mint',
       },
       '2026': {
         title: 'DAO Launch',
@@ -224,7 +224,7 @@ export default {
       },
       '2028+': {
         title: 'Global Ecosystem',
-        desc: '50+ city nodes + food-medicine homology RWA ecosystem',
+        desc: '50+ global super nodes + food-medicine homology RWA ecosystem',
       },
     },
   },
@@ -240,7 +240,7 @@ export default {
   // Footer
   footer: {
     cta: {
-      title: '66,660 pieces, sold out when finished',
+      title: 'Initial Offering，66660 NFTs',
       description: 'Put 2025\'s time in your wallet',
       button: 'Buy Now (88 USD)',
     },
