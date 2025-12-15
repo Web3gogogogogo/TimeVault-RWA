@@ -70,6 +70,7 @@
                     <div class="text-stone-900 font-black text-5xl md:text-6xl leading-tight">{{ $t('compliance.anchor.physicalUnit') }}<span class="text-2xl md:text-3xl font-normal">{{ $t('compliance.anchor.initialWeight') }}</span></div>
                   </div>
                   <div class="text-stone-500 text-xs uppercase tracking-[0.2em] font-medium">{{ $t('compliance.anchor.physical') }}</div>
+                  <div v-if="locale === 'en' || locale === 'zh-TW'" class="text-amber-600 text-xs mt-1 italic">*{{ $t('compliance.anchor.physicalNote') }}*</div>
                 </div>
               </div>
             </div>

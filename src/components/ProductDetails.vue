@@ -95,7 +95,7 @@
           </div>
           
           <h2 class="text-4xl md:text-5xl font-bold mb-8 leading-tight text-stone-900">
-            {{ $t('productDetails.title') }}<br/>{{ $t('productDetails.titleLine2') }}
+            {{ $t('productDetails.title') }}<template v-if="$t('productDetails.titleLine2')"><br/>{{ $t('productDetails.titleLine2') }}</template>
           </h2>
 
           <div class="space-y-6 font-light text-stone-600 text-lg">

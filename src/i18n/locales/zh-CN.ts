@@ -252,6 +252,7 @@ export default {
     copyright: '© 2025 陈皮纪元. All rights reserved.',
     disclaimer: '新会陈皮创岁纪元 NFT 并非证券，仅为真实资产数字所有权凭证',
     risk: '风险提示：资产价格受市场波动影响，请理性参与',
+    restrictedRegion: '限制区域: 陈皮纪元NFT不在中国大陆推广销售。',
   },
 };
 

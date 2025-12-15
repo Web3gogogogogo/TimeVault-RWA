@@ -37,6 +37,7 @@ export default {
       description: 'Each digital asset corresponds to physical Xinhui chenpi, ensuring asset authenticity and uniqueness',
       nft: 'Digital Asset',
       physical: 'Xinhui Chenpi',
+      physicalNote: '1 Jin = 500g',
       physicalUnit: '1 Jin Physical',
       initialWeight: '(Initial Weight)',
       guarantee: 'Each NFT corresponds to real physical assets stored in China Supply & Marketing Cooperatives · Jiangmen Xinhui Chenpi Industrial Park warehouse',
@@ -143,8 +144,8 @@ export default {
   // Product details
   productDetails: {
     badge: 'Asset backed NFT',
-    title: 'Each NFT corresponds to',
-    titleLine2: 'one jin of visible Xinhui chenpi',
+    title: 'Each NFT corresponds to one jin of visible Xinhui chenpi',
+    titleLine2: '',
     clickToZoom: 'Click to zoom',
     fields: {
       origin: 'Origin',
@@ -154,7 +155,7 @@ export default {
       standard: 'Standard',
       standardValue: '10 jin per basket 2025 new peel (initial weight) + chain lock',
       traceability: 'Traceability',
-      traceabilityValue: 'RFID IoT + AntChain on-chain + Data property rights certificate',
+      traceabilityValue: 'RFID IoT + AntChain + Data property rights certificate',
       custody: 'Custody',
       custodyValue: 'First 5 years of storage aging free',
     },
@@ -167,7 +168,7 @@ export default {
     note: '(Volatile oil and flavonoid content increase year by year, aroma and efficacy become more mellow)',
     growth: 'Average annual growth over the past 15 years',
     growthNote: 'The older it gets, the scarcer it becomes, and the curve will only be steeper',
-    chartNote: 'Data refers to retail prices on a certain brand\'s official website of Xinhui chenpi,\naverage growth rate calculated based on this price',
+    chartNote: 'Data refers to retail prices on a certain brand\'s official website\nof Xinhui chenpi, average growth rate calculated based on this price',
     dataPoints: {
       '2025': '2025 (New Peel)',
       '2019': '2019 (5 Years)',
@@ -252,6 +253,7 @@ export default {
     copyright: '© 2025 Chenpi genesis. All rights reserved.',
     disclaimer: 'Xinhui Chenpi Genesis Era NFT is not a security, only a digital ownership certificate of real assets',
     risk: 'Risk Warning: Asset prices are affected by market fluctuations, please participate rationally',
+    restrictedRegion: 'Restricted Region: Chenpi Era NFT is not promoted or sold in Mainland China.',
   },
 };
 

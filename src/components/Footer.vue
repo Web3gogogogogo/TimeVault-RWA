@@ -49,7 +49,8 @@
           </div>
           <div class="text-stone-400 text-xs max-w-md ml-auto">
             {{ $t('footer.disclaimer') }}<br/>
-            {{ $t('footer.risk') }}
+            {{ $t('footer.risk') }}<br/>
+            {{ $t('footer.restrictedRegion') }}
           </div>
         </div>
       </div>

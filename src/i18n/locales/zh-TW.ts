@@ -37,6 +37,7 @@ export default {
       description: '每一份數位資產均對應實物新會陳皮，確保資產真實性與唯一性',
       nft: '數位資產',
       physical: '新會陳皮',
+      physicalNote: '1 斤 = 500g',
       physicalUnit: '1 斤實物',
       initialWeight: '（初始重量）',
       guarantee: '每一枚 NFT 均對應中國供銷·江門新會陳皮產業園倉儲中的真實實物',
@@ -224,7 +225,7 @@ export default {
       },
       '2028+': {
         title: '全球生態',
-        desc: '50+ 全球城市節點 + 藥食同源 RWA 生態',
+        desc: '50+ 全球超級節點 + 藥食同源 RWA 生態',
       },
     },
   },
@@ -252,6 +253,7 @@ export default {
     copyright: '© 2025 陳皮紀元. All rights reserved.',
     disclaimer: '新會陳皮創歲紀元 NFT 並非證券，僅為真實資產數位所有權憑證',
     risk: '風險提示：資產價格受市場波動影響，請理性參與',
+    restrictedRegion: '限制區域: 陳皮紀元NFT不在中國大陸推廣銷售。',
   },
 };
 
