@@ -1,19 +1,20 @@
 <template>
-  <section class="py-32 bg-[#FDFCF9] text-stone-900 overflow-hidden">
+  <section class="py-32 bg-[#FDFCF9] text-stone-900 overflow-x-hidden overflow-y-visible">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 overflow-visible">
          
         <div
           v-motion
           :initial="{ opacity: 0, y: 30 }"
           :visibleOnce="{ opacity: 1, y: 0 }"
+          class="w-full min-w-0 overflow-visible"
         >
           <h2 class="text-5xl md:text-7xl font-bold mb-8 text-stone-900">
             {{ $t('valueCurve.title') }}<br/>{{ $t('valueCurve.titleLine2') }}
           </h2>
-          <p class="text-xl text-stone-500 font-light leading-relaxed mb-12">
+          <p class="text-xl text-stone-500 font-light leading-relaxed mb-12 break-words whitespace-normal">
             {{ $t('valueCurve.description') }}<br/>
-            <span class="text-sm mt-4 block text-stone-400">{{ $t('valueCurve.note') }}</span>
+            <span class="text-sm mt-4 block text-stone-400 break-words whitespace-normal">{{ $t('valueCurve.note') }}</span>
           </p>
 
           <div
@@ -36,7 +37,7 @@
           :initial="{ opacity: 0, x: 30 }"
           :visibleOnce="{ opacity: 1, x: 0 }"
           :transition="{ delay: 300 }"
-          class="relative h-[600px] lg:h-[400px]"
+          class="relative h-[600px] lg:h-[400px] w-full overflow-visible"
         >
           <v-chart
             :key="`chart-${isMobile}`"
@@ -112,10 +113,10 @@ const chartOption = computed(() => {
   const grids = [
     // 主图表
     {
-      left: isMobile.value ? '12%' : '10%',
-      right: isMobile.value ? '5%' : '10%',
-      top: isMobile.value ? '10%' : '10%',
-      bottom: isMobile.value ? '25%' : '20%',
+      left: isMobile.value ? '5%' : '3%',
+      right: isMobile.value ? '2%' : '3%',
+      top: isMobile.value ? '8%' : '8%',
+      bottom: isMobile.value ? '35%' : '28%',
       containLabel: true,
     },
   ];
@@ -149,15 +150,16 @@ const chartOption = computed(() => {
       },
       // 主X轴正下方备注，样式与副X轴备注一致
       name: isMobile.value 
-        ? t('valueCurve.chartNote').replace('，', '，\n')
+        ? t('valueCurve.chartNote').replace('\n', '\n')
         : t('valueCurve.chartNote'),
       nameLocation: 'middle',
       nameGap: isMobile.value ? 45 : 55,
       nameTextStyle: {
         color: '#D97706',
-        fontSize: isMobile.value ? 16 : 16,
+        fontSize: isMobile.value ? 12 : 18,
         fontWeight: 'bold',
-        lineHeight: isMobile.value ? 20 : 16,
+        lineHeight: isMobile.value ? 15 : 20,
+        rich: {},
       },
     },
   ],
@@ -256,11 +258,21 @@ const chartOption = computed(() => {
   height: 100%;
   width: 100%;
   min-height: 400px;
+  overflow: visible;
 }
 
 @media (max-width: 1023px) {
   .chart {
     min-height: 600px;
   }
+}
+
+/* 确保ECharts容器内的文字不被截断 */
+:deep(.echarts) {
+  overflow: visible !important;
+}
+
+:deep(canvas) {
+  max-width: 100% !important;
 }
 </style>

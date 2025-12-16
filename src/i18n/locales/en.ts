@@ -169,7 +169,7 @@ export default {
     note: '(Volatile oil and flavonoid content increase year by year, aroma and efficacy become more mellow)',
     growth: 'Average annual growth over the past 15 years',
     growthNote: 'The older it gets, the scarcer it becomes, and the curve will only be steeper',
-    chartNote: 'Data refers to retail prices on a certain brand\'s official website\nof Xinhui chenpi, average growth rate calculated based on this price',
+    chartNote: 'Data refers to retail prices on a certain brand\'s official\n websiteof Xinhui chenpi, average growth rate\n calculated based on this price',
     dataPoints: {
       '2025': '2025 (New Peel)',
       '2019': '2019 (5 Years)',
@@ -254,7 +254,7 @@ export default {
     copyright: '© 2025 Chenpi genesis. All rights reserved.',
     disclaimer: 'Xinhui Chenpi Genesis Era NFT is not a security, only a digital ownership certificate of real assets',
     risk: 'Risk Warning: Asset prices are affected by market fluctuations, please participate rationally',
-    restrictedRegion: 'Restricted Region: Chenpi Era NFT is not promoted or sold in Mainland China.',
+    restrictedRegion: 'Restricted Region: Not promoted or sold in Mainland China.',
   },
 };
 
