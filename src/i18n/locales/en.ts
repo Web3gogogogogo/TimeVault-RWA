@@ -36,6 +36,7 @@ export default {
       title: 'Real Asset Backing',
       description: 'Each digital asset corresponds to physical Xinhui chenpi, ensuring asset authenticity and uniqueness',
       nft: 'Digital Asset',
+      nftNote: 'Ethereum ERC-721',
       physical: 'Xinhui Chenpi',
       physicalNote: '1 Jin = 500g',
       physicalUnit: '1 Jin Physical',

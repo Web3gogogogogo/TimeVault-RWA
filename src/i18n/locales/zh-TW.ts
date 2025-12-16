@@ -36,6 +36,7 @@ export default {
       title: '真實錨定',
       description: '每一份數位資產均對應實物新會陳皮，確保資產真實性與唯一性',
       nft: '數位資產',
+      nftNote: '以太坊ERC-721',
       physical: '新會陳皮',
       physicalNote: '1 斤 = 500g',
       physicalUnit: '1 斤實物',

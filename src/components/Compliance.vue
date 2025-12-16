@@ -55,6 +55,7 @@
                     <div class="text-stone-900 font-black text-5xl md:text-6xl leading-tight">1 NFT</div>
                   </div>
                   <div class="text-stone-500 text-xs uppercase tracking-[0.2em] font-medium">{{ $t('compliance.anchor.nft') }}</div>
+                  <div class="text-amber-600 text-xs mt-1 italic">*{{ $t('compliance.anchor.nftNote') }}*</div>
                 </div>
                 
                 <!-- 等号连接 -->
